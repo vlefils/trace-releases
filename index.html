@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TRACE — le jeu de rôle dont le maître du jeu improvise</title>
+<meta name="description" content="TRACE est un jeu de rôle solo pour macOS. Vous écrivez ce que fait votre personnage ; un maître du jeu répond, lance les dés et fait vivre le monde. Téléchargement et guide d'installation.">
+<meta name="theme-color" content="#0e1210">
+<meta property="og:title" content="TRACE — le jeu de rôle dont le maître du jeu improvise">
+<meta property="og:description" content="Trois campagnes, la création libre de mondes, des scènes illustrées. Pour macOS.">
+<meta property="og:image" content="https://vlefils.github.io/trace-releases/assets/img/keravel.webp">
+<meta property="og:url" content="https://vlefils.github.io/trace-releases/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://vlefils.github.io/trace-releases/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230e1210'/%3E%3Cpath d='M14 20h36M32 20v28' stroke='%23dac39b' stroke-width='5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/keravel.webp">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body data-releases="vlefils/trace-releases">
+<a class="skip" href="#main">Aller au contenu</a>
+<div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+<header class="topbar" id="topbar">
+  <a class="brand" href="#top" aria-label="TRACE, haut de page">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 18h40M32 18v32" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
+    <span>TRACE</span>
+  </a>
+  <nav class="topnav" aria-label="Sections">
+    <a href="#jeu">Le jeu</a>
+    <a href="#demo">Démo</a>
+    <a href="#mondes">Mondes</a>
+    <a href="#installer">Installer</a>
+    <a class="topnav-cta" href="#telecharger">Télécharger</a>
+  </nav>
+</header>
+
+<nav class="rail" aria-hidden="true">
+  <span class="rail-line"><span id="rail-fill"></span></span>
+  <a href="#top" data-rail="top"><i></i><b>Accueil</b></a>
+  <a href="#jeu" data-rail="jeu"><i></i><b>Le jeu</b></a>
+  <a href="#demo" data-rail="demo"><i></i><b>Démo</b></a>
+  <a href="#mondes" data-rail="mondes"><i></i><b>Mondes</b></a>
+  <a href="#telecharger" data-rail="telecharger"><i></i><b>Télécharger</b></a>
+  <a href="#installer" data-rail="installer"><i></i><b>Installer</b></a>
+  <a href="#faq" data-rail="faq"><i></i><b>Questions</b></a>
+</nav>
+
+<main id="main">
+
+<!-- ───────────── Accueil ───────────── -->
+<section class="hero" id="top" data-section>
+  <div class="hero-stage" id="hero-stage" aria-hidden="true">
+    <img class="hero-slide is-on" src="assets/img/keravel.webp" alt="" data-focus="0.62" style="--pos:62% 50%" decoding="async">
+    <img class="hero-slide" src="assets/img/sector-7.webp" alt="" data-focus="0.4" style="--pos:40% 50%" decoding="async">
+    <img class="hero-slide" src="assets/img/paradise.webp" alt="" data-focus="0.63" style="--pos:63% 50%" decoding="async">
+    <canvas id="hero-gl"></canvas>
+    <div class="hero-shade"></div>
+  </div>
+
+  <div class="hero-copy">
+    <p class="eyebrow">Jeu de rôle solo · macOS</p>
+    <h1 class="title">
+      <svg class="title-svg" viewBox="0 0 1000 250" role="img" aria-label="TRACE">
+        <text x="512" y="200" text-anchor="middle" class="title-text">TRACE</text>
+      </svg>
+    </h1>
+    <p class="lede">Vous écrivez ce que fait votre personnage. Un maître du jeu vous répond, lance les dés et fait vivre le monde autour de vous.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#telecharger" data-magnetic>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Télécharger pour macOS
+      </a>
+      <a class="btn btn-ghost" href="#demo">Jouer une scène d'essai</a>
+    </div>
+    <p class="hero-note" id="hero-note">macOS 15 ou plus récent · Apple Silicon et Intel</p>
+  </div>
+
+  <div class="worlds-switch" id="worlds-switch" role="group" aria-label="Choisir le décor affiché">
+    <button type="button" class="is-on" data-world="0"><span>Kéravel, 1926</span><small>Les Voix sous le plancher</small><i></i></button>
+    <button type="button" data-world="1"><span>Secteur 7</span><small>Projet Séraphin</small><i></i></button>
+    <button type="button" data-world="2"><span>Paradise</span><small>The Hub</small><i></i></button>
+  </div>
+</section>
+
+<!-- ───────────── Le jeu ───────────── -->
+<section class="section" id="jeu" data-section>
+  <div class="wrap">
+    <p class="kicker reveal">Le jeu</p>
+    <h2 class="reveal">Un maître du jeu, pas un menu</h2>
+    <div class="intro">
+      <p class="reveal">Dans TRACE, il n'y a pas de liste d'actions à cocher. Vous décrivez un geste, une réplique ou une prise de risque, comme autour d'une table. Le maître du jeu interprète, raconte la suite et laisse le monde réagir.</p>
+      <p class="reveal">Derrière lui, un moteur tient les comptes&nbsp;: les dés, la santé, l'argent, les objets et les trajets sont calculés, pas improvisés. Le récit suit ce qui s'est réellement passé.</p>
+    </div>
+
+    <ul class="stats reveal" aria-label="Quelques chiffres">
+      <li><strong data-count="3">3</strong><span>campagnes écrites</span></li>
+      <li><strong data-count="37">37</strong><span>lieux à explorer dans Paradise</span></li>
+      <li><strong data-count="8" data-suffix=" s">8 s</strong><span>par réponse, médiane mesurée sur une partie de 109 tours</span></li>
+      <li><strong data-count="2">2</strong><span>styles de maître du jeu</span></li>
+    </ul>
+
+    <div class="features">
+      <article class="card reveal" data-spot>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 24l3.5-1L24 8.5 21.5 6 7 20.5 6 24zM19 8.5l2.5 2.5M6 27h20"/></svg>
+        <h3>Vous écrivez, le MJ répond</h3>
+        <p>Aucune action imposée. Vous pouvez même préciser votre geste pendant que la réponse arrive.</p>
+      </article>
+      <article class="card reveal" data-spot>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4l10.5 6v12L16 28 5.5 22V10L16 4zM16 4v8m0 0l10.5-2M16 12L5.5 10M16 12l-5 9m5-9l5 9m-10 0h10m-10 0l-5.5 1m15.5-1l5.5 1M11 21l5 7 5-7"/></svg>
+        <h3>Le moteur tient les comptes</h3>
+        <p>Jets de dés, points de vie, argent, inventaire, trajets&nbsp;: ces valeurs sont calculées par le moteur, jamais inventées au fil du récit.</p>
+      </article>
+      <article class="card reveal" data-spot>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 5h15a3 3 0 013 3v19H10a3 3 0 01-3-3V5zm0 19a3 3 0 013-3h15M12 10h8m-8 4h6"/></svg>
+        <h3>Le monde se souvient</h3>
+        <p>Chaque partie garde sa table, ses événements et le carnet du MJ. Les personnages retiennent ce que vous avez fait.</p>
+      </article>
+      <article class="card reveal" data-spot>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7h22v18H5V7zm0 14l6.5-6.5 5 5 3.5-3.5L27 23M20.5 12.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
+        <h3>Des scènes illustrées</h3>
+        <p>Le MJ choisit les moments qui méritent une image. L'illustration suit la scène et reprend le portrait de votre personnage.</p>
+      </article>
+      <article class="card reveal" data-spot>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 13H4V8m0 5c2.5-4.5 7-7 12-7 6.5 0 12 5 12 11s-5.5 11-12 11c-4.5 0-8.5-2.5-10.5-6"/></svg>
+        <h3>Le droit à l'erreur</h3>
+        <p>Vous pouvez remplacer votre dernière action. Ses conséquences sont annulées et l'ancienne version reste consultable.</p>
+      </article>
+      <article class="card reveal" data-spot>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5v22M7 9h18M7 9l-4 8a4 4 0 008 0L7 9zm18 0l-4 8a4 4 0 008 0l-4-8zM11 27h10"/></svg>
+        <h3>Deux styles de table</h3>
+        <p>Cool pour une histoire fluide, strict pour un suivi serré de ce que vous possédez vraiment. Le style se change en cours de partie.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── Démo ───────────── -->
+<section class="section section-demo" id="demo" data-section>
+  <div class="wrap demo-grid">
+    <div class="demo-copy">
+      <p class="kicker reveal">Démo</p>
+      <h2 class="reveal">Jouez une scène, ici même</h2>
+      <p class="reveal">Vous êtes Alix, aventurière, dans la cour d'un fort tenu par des pillards. Choisissez une action&nbsp;: les dés sont vraiment lancés dans votre navigateur.</p>
+      <p class="reveal">Changez ensuite le style du maître du jeu et réclamez une charrette que vous n'avez jamais eue. La différence entre <em>cool</em> et <em>strict</em> se voit tout de suite.</p>
+      <dl class="sheet reveal" aria-label="Fiche d'Alix">
+        <div><dt>Alix</dt><dd>Aventurière</dd></div>
+        <div><dt>Points de vie</dt><dd><span id="hp-value">28</span> / 28 <span class="hp"><i id="hp-bar"></i></span></dd></div>
+        <div><dt>Discrétion</dt><dd>+4</dd></div>
+        <div><dt>Charisme</dt><dd>+1</dd></div>
+      </dl>
+    </div>
+
+    <div class="table reveal" id="table">
+      <div class="table-head">
+        <span class="table-place">Fort des Cendres · cour intérieure</span>
+        <div class="segmented" role="group" aria-label="Style du maître du jeu">
+          <button type="button" data-profile="cool" aria-pressed="true">Cool</button>
+          <button type="button" data-profile="strict" aria-pressed="false">Strict</button>
+        </div>
+      </div>
+      <div class="table-feed" id="feed" aria-live="polite">
+        <p class="gm">Crépuscule sur le fort des Cendres. Depuis la porte des écuries, une arbalétrière surveille la cour ; elle ne t'a pas repérée. La chapelle est de l'autre côté, et la cour offre peu de couvert. Que fais-tu ?</p>
+      </div>
+      <div class="table-choices" id="choices"></div>
+      <p class="table-note">Scène de démonstration écrite à l'avance. Dans le jeu, vous écrivez librement et le maître du jeu improvise.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── Mondes ───────────── -->
+<section class="section" id="mondes" data-section>
+  <div class="wrap">
+    <p class="kicker reveal">Mondes</p>
+    <h2 class="reveal">Trois campagnes, puis les vôtres</h2>
+    <p class="section-lede reveal">Chaque campagne a son ton, ses lieux et ses personnages. Quand vous les aurez épuisées, décrivez votre propre monde.</p>
+  </div>
+
+  <div class="worlds reveal" id="worlds">
+    <article class="world is-open" tabindex="0" style="--img:url('assets/img/keravel.webp');--pos:62% 50%">
+      <div class="world-body">
+        <p class="world-tag">Horreur côtière · novembre 1926</p>
+        <h3>Les Voix sous le plancher</h3>
+        <p class="world-text">Une lettre signée de votre sœur, enterrée douze ans plus tôt, vous ramène à Kéravel. Dans ce village breton bientôt isolé par la marée, quelqu'un a rallumé la maison familiale.</p>
+        <p class="world-hook">«&nbsp;Une lampe éclaire la console ; une autre lueur vient du palier. Personne n'est visible.&nbsp;»</p>
+      </div>
+    </article>
+    <article class="world" tabindex="0" style="--img:url('assets/img/sector-7.webp');--pos:35% 50%">
+      <div class="world-body">
+        <p class="world-tag">Post-apocalypse · cyberpunk mystique</p>
+        <h3>Projet Séraphin&nbsp;: le Kill Switch</h3>
+        <p class="world-text">Un monde divisé entre cités corporatistes et communautés dirigées par des IA. Vous êtes ferrailleur du Secteur 7, et porteur accidentel de la Clé.</p>
+        <p class="world-hook">«&nbsp;Le réveil grésille dans votre planque. Vous avez faim et trois crédits.&nbsp;»</p>
+      </div>
+    </article>
+    <article class="world" tabindex="0" style="--img:url('assets/img/paradise.webp');--pos:63% 50%">
+      <div class="world-body">
+        <p class="world-tag">Cyberpunk · mercenaires · satire</p>
+        <h3>The Hub</h3>
+        <p class="world-text">Paradise s'élève sur des siècles de constructions. Michel, brute à crête punk et bras mécanique d'assaut, n'a qu'un objectif écrit&nbsp;: aller au Hub. Ensuite, la ville et les choix lui appartiennent.</p>
+        <p class="world-hook">«&nbsp;L'odeur de friture se mêle au caoutchouc chaud. À toi de décider de la suite.&nbsp;»</p>
+      </div>
+    </article>
+    <article class="world" tabindex="0" style="--img:url('assets/img/rooftops.webp');--pos:50% 30%">
+      <div class="world-body">
+        <p class="world-tag">Création libre</p>
+        <h3>Votre monde</h3>
+        <p class="world-text">Décrivez un univers, un personnage et ce qu'il cherche. TRACE écrit une ouverture jouable avec le même moteur, les mêmes règles et le même maître du jeu.</p>
+        <p class="world-hook">«&nbsp;Retrouver l'anneau avant l'arrivée de l'hiver.&nbsp;»</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="faces reveal" aria-label="Quelques personnages que vous croiserez">
+    <div class="faces-track" id="faces-track">
+      <figure><img src="assets/portraits/jeanne.webp" alt="Jeanne" loading="lazy" width="480" height="480"><figcaption>Jeanne <span>Kéravel</span></figcaption></figure>
+      <figure><img src="assets/portraits/mara.webp" alt="Mara" loading="lazy" width="480" height="480"><figcaption>Mara <span>Séraphin</span></figcaption></figure>
+      <figure><img src="assets/portraits/baptiste.webp" alt="Baptiste" loading="lazy" width="480" height="480"><figcaption>Baptiste <span>Kéravel</span></figcaption></figure>
+      <figure><img src="assets/portraits/jax.webp" alt="Jax" loading="lazy" width="480" height="480"><figcaption>Jax <span>Séraphin</span></figcaption></figure>
+      <figure><img src="assets/portraits/maud.webp" alt="Maud" loading="lazy" width="480" height="480"><figcaption>Maud <span>Kéravel</span></figcaption></figure>
+      <figure><img src="assets/portraits/elias.webp" alt="Elias" loading="lazy" width="480" height="480"><figcaption>Elias <span>Séraphin</span></figcaption></figure>
+      <figure><img src="assets/portraits/leon.webp" alt="Léon" loading="lazy" width="480" height="480"><figcaption>Léon <span>Kéravel</span></figcaption></figure>
+      <figure><img src="assets/portraits/auriel.webp" alt="Auriel" loading="lazy" width="480" height="480"><figcaption>Auriel <span>Séraphin</span></figcaption></figure>
+      <figure><img src="assets/portraits/anselme.webp" alt="Anselme" loading="lazy" width="480" height="480"><figcaption>Anselme <span>Séraphin</span></figcaption></figure>
+      <figure><img src="assets/portraits/red.webp" alt="Red" loading="lazy" width="480" height="480"><figcaption>Red <span>Séraphin</span></figcaption></figure>
+      <figure><img src="assets/portraits/silas.webp" alt="Silas" loading="lazy" width="480" height="480"><figcaption>Silas <span>Séraphin</span></figcaption></figure>
+      <figure><img src="assets/portraits/vex.webp" alt="Vex" loading="lazy" width="480" height="480"><figcaption>Vex <span>Séraphin</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── Télécharger ───────────── -->
+<section class="section section-download" id="telecharger" data-section>
+  <div class="download-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="kicker reveal">Télécharger</p>
+    <h2 class="reveal">TRACE pour macOS</h2>
+    <p class="section-lede reveal" id="release-line">Choisissez le paquet qui correspond au processeur de votre Mac.</p>
+    <p class="notice reveal" id="platform-notice" hidden></p>
+
+    <div class="downloads">
+      <article class="dl-card reveal" data-spot data-arch="arm64">
+        <p class="dl-badge" hidden>Recommandé pour ce Mac</p>
+        <h3>Apple Silicon</h3>
+        <p class="dl-sub">Mac à puce Apple&nbsp;: M1, M2, M3, M4 et suivantes</p>
+        <a class="btn btn-primary" data-magnetic data-asset="TRACE-macOS-arm64.dmg" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-macOS-arm64.dmg">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Télécharger le .dmg
+        </a>
+        <a class="dl-alt" data-asset="TRACE-macOS-arm64.zip" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-macOS-arm64.zip">ou l'archive .zip</a>
+        <p class="dl-meta" data-meta>Environ 420 Mo</p>
+      </article>
+      <article class="dl-card reveal" data-spot data-arch="x86_64">
+        <p class="dl-badge" hidden>Recommandé pour ce Mac</p>
+        <h3>Intel</h3>
+        <p class="dl-sub">Mac à processeur Intel, sous macOS 15</p>
+        <a class="btn btn-primary" data-magnetic data-asset="TRACE-macOS-x86_64.dmg" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-macOS-x86_64.dmg">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Télécharger le .dmg
+        </a>
+        <a class="dl-alt" data-asset="TRACE-macOS-x86_64.zip" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-macOS-x86_64.zip">ou l'archive .zip</a>
+        <p class="dl-meta" data-meta>Environ 430 Mo</p>
+      </article>
+    </div>
+
+    <div class="needs reveal">
+      <h3>Ce qu'il vous faut</h3>
+      <ul>
+        <li><strong>macOS 15 ou plus récent.</strong> Pour connaître votre processeur&nbsp;: menu Pomme, puis «&nbsp;À propos de ce Mac&nbsp;».</li>
+        <li><strong>Codex CLI, connecté à votre compte.</strong> Le maître du jeu et les illustrations passent par lui. TRACE ne copie ni jeton ni dossier de configuration.</li>
+        <li><strong>Une connexion Internet</strong> pendant le jeu, et quelques gigaoctets libres.</li>
+      </ul>
+      <p>Python, la base des comptes et tout le reste sont déjà dans l'application. Rien d'autre à installer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── Installer ───────────── -->
+<section class="section" id="installer" data-section>
+  <div class="wrap">
+    <p class="kicker reveal">Installer</p>
+    <h2 class="reveal">Deux façons de faire</h2>
+    <p class="section-lede reveal">Suivez les étapes vous-même, ou confiez-les à un agent de code comme Codex en lui donnant le prompt prêt à copier.</p>
+
+    <div class="tabs reveal" id="install-tabs">
+      <div class="tablist" role="tablist" aria-label="Méthode d'installation">
+        <button type="button" role="tab" id="tab-manual" aria-controls="panel-manual" aria-selected="true">À la main</button>
+        <button type="button" role="tab" id="tab-prompt" aria-controls="panel-prompt" aria-selected="false" tabindex="-1">Avec un prompt</button>
+      </div>
+
+      <div class="tabpanel" role="tabpanel" id="panel-manual" aria-labelledby="tab-manual">
+        <ol class="steps">
+          <li>
+            <h3>Installez Codex CLI et connectez-vous</h3>
+            <p>Dans le Terminal, installez la commande puis ouvrez une session avec votre compte. L'application graphique Codex seule ne suffit pas toujours.</p>
+            <pre class="code"><code>npm install -g @openai/codex
+codex login</code><button type="button" class="copy" data-copy>Copier</button></pre>
+          </li>
+          <li>
+            <h3>Téléchargez le paquet de votre Mac</h3>
+            <p>Prenez le fichier <code>.dmg</code> <a href="#telecharger">Apple Silicon ou Intel</a>, ouvrez-le, puis glissez <strong>TRACE</strong> dans le dossier Applications.</p>
+          </li>
+          <li>
+            <h3>Autorisez le premier lancement</h3>
+            <p>L'application n'est pas encore notarisée par Apple, donc macOS la bloque à la première ouverture. Ouvrez <strong>Réglages Système → Confidentialité et sécurité</strong>, puis cliquez sur «&nbsp;Ouvrir quand même&nbsp;». Vous pouvez aussi lever le blocage dans le Terminal, pour cette application seulement&nbsp;:</p>
+            <pre class="code"><code>xattr -dr com.apple.quarantine /Applications/TRACE.app</code><button type="button" class="copy" data-copy>Copier</button></pre>
+          </li>
+          <li>
+            <h3>Créez votre compte local et jouez</h3>
+            <p>Au démarrage, TRACE vérifie que Codex répond. Créez ensuite un compte dans l'interface&nbsp;: il n'existe que sur votre Mac. Choisissez une campagne ou décrivez votre monde.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="tabpanel" role="tabpanel" id="panel-prompt" aria-labelledby="tab-prompt" hidden>
+        <p class="prompt-intro">Collez ce texte dans Codex, ou dans un autre agent qui a accès au Terminal de votre Mac. Il s'arrêtera dès qu'une étape demande une action de votre part.</p>
+        <pre class="code code-prompt"><code id="prompt-text">Installe le jeu TRACE sur ce Mac. Procède étape par étape et arrête-toi pour me demander dès qu'une étape exige une action de ma part. Ne saisis jamais de mot de passe ni de code à ma place.
+
+1. Vérifie que macOS est en version 15 ou plus (sw_vers) et note l'architecture (uname -m : arm64 ou x86_64). Si macOS est plus ancien, arrête-toi et dis-le-moi.
+
+2. TRACE a besoin de Codex CLI connecté à mon compte. Vérifie codex --version et codex login status. Si la commande manque, propose de l'installer. Si je ne suis pas connecté, demande-moi de lancer moi-même codex login.
+
+3. Télécharge le paquet qui correspond à l'architecture dans ~/Downloads :
+   curl -fL -o ~/Downloads/TRACE.dmg https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-macOS-ARCH.dmg
+   (remplace ARCH par arm64 ou x86_64).
+
+4. Monte le DMG avec hdiutil attach, copie TRACE.app dans /Applications avec ditto, puis démonte le DMG avec hdiutil detach. Si une ancienne TRACE.app existe, vérifie qu'elle est fermée avant de la remplacer. Ne touche jamais à ~/Library/Application Support/TRACE/ : ce dossier contient mes parties et mes comptes.
+
+5. L'application n'est pas notarisée. Si elle porte l'attribut de quarantaine, retire-le uniquement sur elle :
+   xattr -dr com.apple.quarantine /Applications/TRACE.app
+   Ne modifie aucun réglage de sécurité global du Mac.
+
+6. Ouvre TRACE (open -a TRACE) et vérifie qu'une fenêtre s'affiche. En cas d'échec, montre-moi la fin de ~/Library/Application Support/TRACE/logs/desktop.log. Si TRACE ne trouve pas Codex, indique-moi le menu TRACE → Choisir Codex CLI… et le chemin donné par which codex.
+
+Termine en me disant ce qui a été installé, où, et ce qu'il me reste à faire : créer un compte local dans l'interface de TRACE.</code><button type="button" class="copy" data-copy>Copier le prompt</button></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── Questions ───────────── -->
+<section class="section" id="faq" data-section>
+  <div class="wrap wrap-narrow">
+    <p class="kicker reveal">Questions</p>
+    <h2 class="reveal">Avant de vous lancer</h2>
+    <div class="faq reveal">
+      <details>
+        <summary>TRACE est-il payant ?</summary>
+        <p>L'application ne demande ni abonnement ni paiement. Le maître du jeu et les illustrations utilisent votre propre compte Codex&nbsp;: ses capacités et ses quotas s'appliquent, pour le texte comme pour les images.</p>
+      </details>
+      <details>
+        <summary>Peut-on jouer hors ligne ?</summary>
+        <p>Non. L'application s'installe sans dépendance, mais le maître du jeu est un modèle en ligne. Il faut une connexion pendant la partie.</p>
+      </details>
+      <details>
+        <summary>Où sont enregistrées mes parties ?</summary>
+        <p>Sur votre Mac, dans <code>~/Library/Application Support/TRACE/</code>. Ce dossier contient les comptes, les parties, les notes du maître du jeu et les illustrations. Remplacer l'application par une version plus récente ne le modifie pas.</p>
+      </details>
+      <details>
+        <summary>macOS refuse d'ouvrir l'application</summary>
+        <p>C'est attendu au premier lancement, tant que l'application n'est pas notarisée. Passez par <strong>Réglages Système → Confidentialité et sécurité → Ouvrir quand même</strong>, ou utilisez la commande <code>xattr</code> du guide d'installation.</p>
+      </details>
+      <details>
+        <summary>TRACE ne trouve pas Codex</summary>
+        <p>Ouvrez le menu <strong>TRACE → Choisir Codex CLI…</strong> et indiquez l'emplacement de la commande. Dans le Terminal, <code>which codex</code> vous donne ce chemin. Vérifiez aussi que <code>codex login status</code> vous montre connecté.</p>
+      </details>
+      <details>
+        <summary>Existe-t-il une version Windows ou Linux ?</summary>
+        <p>Pas pour l'instant. Seuls les paquets macOS, Apple Silicon et Intel, sont publiés.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-row">
+    <a class="brand" href="#top" aria-label="TRACE, haut de page">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 18h40M32 18v32" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
+      <span>TRACE</span>
+    </a>
+    <p>Un jeu de rôle solo, conduit par un maître du jeu qui improvise.</p>
+    <a class="footer-link" href="https://github.com/vlefils/trace-releases/releases">Toutes les versions</a>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
