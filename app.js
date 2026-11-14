@@ -416,6 +416,7 @@ void main(){
       }
       if (focus) tab.focus();
     };
+    select(tabs.find(tab => tab.getAttribute("aria-selected") === "true") || tabs[0]);
     tabs.forEach((tab, index) => {
       tab.addEventListener("click", () => select(tab));
       tab.addEventListener("keydown", event => {
@@ -477,7 +478,9 @@ void main(){
     const agent = navigator.userAgent, data = navigator.userAgentData;
     const platform = (data && data.platform) || navigator.platform || "";
     const mobileApple = /iPhone|iPad|iPod/.test(agent) || (/Mac/.test(platform) && navigator.maxTouchPoints > 1);
+    const journey = system => { const tab = document.getElementById(`tab-${system}`); if (tab) tab.click(); };
     const recommend = (system, arch) => {
+      journey(system);
       const card = $(`.dl-card[data-system="${system}"][data-arch="${arch}"]`);
       if (!card) return;
       card.classList.add("is-match");
@@ -492,6 +495,7 @@ void main(){
     if (/Win/.test(platform)) return recommend("windows", "x86_64");
     if (/Linux/.test(platform)) return recommend("linux", "x86_64");
     if (!/mac/i.test(platform)) return;
+    journey("macos");
     let arch = null;
     if (data && data.getHighEntropyValues) {
       try { const values = await data.getHighEntropyValues(["architecture"]); arch = values.architecture === "arm" ? "arm64" : values.architecture === "x86" ? "x86_64" : null; } catch { /* inconnu */ }

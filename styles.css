@@ -289,6 +289,20 @@ body::after {
 .copy:hover { border-color: var(--brass); color: var(--brass-hi); }
 .copy.is-done { background: var(--moss); border-color: var(--moss); color: var(--on-brass); }
 .prompt-intro { max-width: 46rem; }
+.journey-lede { max-width: 46rem; margin-bottom: 2rem; color: var(--text); font: 500 1.25rem/1.45 var(--font-story); }
+.step-buttons { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1rem; }
+.btn-small { padding: .7rem 1.2rem; font-size: .92rem; }
+.btn-small svg { width: 1.05rem; height: 1.05rem; }
+.step-note { margin-top: .9rem; padding-left: .9rem; border-left: 2px solid var(--line-strong); font-size: .92rem; color: var(--text-3); }
+.agent { max-width: 52rem; margin-top: 2.4rem; border: 1px solid var(--line); border-radius: 12px; background: var(--canvas-2); }
+.agent summary { position: relative; padding: 1.1rem 3rem 1.1rem 1.3rem; list-style: none; cursor: pointer; font: 600 1.3rem/1.25 var(--font-display); color: var(--text); }
+.agent summary::-webkit-details-marker { display: none; }
+.agent summary::after { content: ""; position: absolute; right: 1.3rem; top: 50%; width: .65rem; height: .65rem; border-right: 1.5px solid var(--brass); border-bottom: 1.5px solid var(--brass); transform: translateY(-70%) rotate(45deg); transition: transform .35s var(--ease); }
+.agent[open] summary::after { transform: translateY(-30%) rotate(-135deg); }
+.agent summary:hover { color: var(--brass-hi); }
+.agent > p { padding: 0 1.3rem; color: var(--text-2); }
+.agent .code { margin: 1rem 1.3rem 1.3rem; }
+.tablist { flex-wrap: wrap; }
 
 /* ── Questions ── */
 .faq { margin-top: 2.2rem; border-top: 1px solid var(--line); }
