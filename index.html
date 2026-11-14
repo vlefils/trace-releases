@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TRACE — le jeu de rôle dont le maître du jeu improvise</title>
-<meta name="description" content="TRACE est un jeu de rôle solo pour macOS. Vous écrivez ce que fait votre personnage ; un maître du jeu répond, lance les dés et fait vivre le monde. Téléchargement et guide d'installation.">
+<meta name="description" content="TRACE est un jeu de rôle solo pour macOS, Windows et Linux. Vous écrivez ce que fait votre personnage ; un maître du jeu répond, lance les dés et fait vivre le monde. Téléchargement et guide d'installation.">
 <meta name="theme-color" content="#0e1210">
 <meta property="og:title" content="TRACE — le jeu de rôle dont le maître du jeu improvise">
-<meta property="og:description" content="Trois campagnes, la création libre de mondes, des scènes illustrées. Pour macOS.">
+<meta property="og:description" content="Trois campagnes, la création libre de mondes, des scènes illustrées. Pour macOS, Windows et Linux.">
 <meta property="og:image" content="https://vlefils.github.io/trace-releases/assets/img/keravel.webp">
 <meta property="og:url" content="https://vlefils.github.io/trace-releases/">
 <meta name="twitter:card" content="summary_large_image">
@@ -63,7 +63,7 @@
   </div>
 
   <div class="hero-copy">
-    <p class="eyebrow">Jeu de rôle solo · macOS</p>
+    <p class="eyebrow">Jeu de rôle solo · macOS · Windows · Linux</p>
     <h1 class="title">
       <svg class="title-svg" viewBox="0 0 1000 250" role="img" aria-label="TRACE">
         <text x="512" y="200" text-anchor="middle" class="title-text">TRACE</text>
@@ -73,11 +73,11 @@
     <div class="cta-row">
       <a class="btn btn-primary" href="#telecharger" data-magnetic>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Télécharger pour macOS
+        Télécharger TRACE
       </a>
       <a class="btn btn-ghost" href="#demo">Jouer une scène d'essai</a>
     </div>
-    <p class="hero-note" id="hero-note">macOS 15 ou plus récent · Apple Silicon et Intel</p>
+    <p class="hero-note" id="hero-note">macOS, Windows et Linux · avec Codex CLI ou Claude Code</p>
   </div>
 
   <div class="worlds-switch" id="worlds-switch" role="group" aria-label="Choisir le décor affiché">
@@ -123,7 +123,7 @@
       <article class="card reveal" data-spot>
         <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7h22v18H5V7zm0 14l6.5-6.5 5 5 3.5-3.5L27 23M20.5 12.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
         <h3>Des scènes illustrées</h3>
-        <p>Le MJ choisit les moments qui méritent une image. L'illustration suit la scène et reprend le portrait de votre personnage.</p>
+        <p>Le MJ choisit les moments qui méritent une image. L'illustration suit la scène et reprend le portrait de votre personnage. Avec Codex uniquement.</p>
       </article>
       <article class="card reveal" data-spot>
         <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 13H4V8m0 5c2.5-4.5 7-7 12-7 6.5 0 12 5 12 11s-5.5 11-12 11c-4.5 0-8.5-2.5-10.5-6"/></svg>
@@ -238,43 +238,77 @@
   <div class="download-bg" aria-hidden="true"></div>
   <div class="wrap">
     <p class="kicker reveal">Télécharger</p>
-    <h2 class="reveal">TRACE pour macOS</h2>
-    <p class="section-lede reveal" id="release-line">Choisissez le paquet qui correspond au processeur de votre Mac.</p>
+    <h2 class="reveal">Télécharger TRACE</h2>
+    <p class="section-lede reveal" id="release-line">Choisissez le paquet de votre ordinateur. Tout est inclus, sauf l'assistant qui fait vivre le maître du jeu.</p>
     <p class="notice reveal" id="platform-notice" hidden></p>
 
     <div class="downloads">
-      <article class="dl-card reveal" data-spot data-arch="arm64">
-        <p class="dl-badge" hidden>Recommandé pour ce Mac</p>
-        <h3>Apple Silicon</h3>
-        <p class="dl-sub">Mac à puce Apple&nbsp;: M1, M2, M3, M4 et suivantes</p>
-        <a class="btn btn-primary" data-magnetic data-asset="TRACE-macOS-arm64.dmg" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-macOS-arm64.dmg">
+      <article class="dl-card reveal" data-spot data-system="macos" data-arch="arm64">
+        <p class="dl-badge" hidden>Recommandé pour cet ordinateur</p>
+        <h3>Mac · Apple Silicon</h3>
+        <p class="dl-sub">Puce Apple&nbsp;: M1, M2, M3, M4 et suivantes. macOS 15 ou plus récent.</p>
+        <a class="btn btn-primary" data-magnetic data-primary data-asset="TRACE-macOS-arm64.dmg" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-macOS-arm64.dmg">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Télécharger le .dmg
         </a>
         <a class="dl-alt" data-asset="TRACE-macOS-arm64.zip" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-macOS-arm64.zip">ou l'archive .zip</a>
         <p class="dl-meta" data-meta>Environ 250 Mo</p>
       </article>
-      <article class="dl-card reveal" data-spot data-arch="x86_64">
-        <p class="dl-badge" hidden>Recommandé pour ce Mac</p>
-        <h3>Intel</h3>
-        <p class="dl-sub">Mac à processeur Intel, sous macOS 15</p>
-        <a class="btn btn-primary" data-magnetic data-asset="TRACE-macOS-x86_64.dmg" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-macOS-x86_64.dmg">
+      <article class="dl-card reveal" data-spot data-system="macos" data-arch="x86_64">
+        <p class="dl-badge" hidden>Recommandé pour cet ordinateur</p>
+        <h3>Mac · Intel</h3>
+        <p class="dl-sub">Processeur Intel. macOS 15 ou plus récent.</p>
+        <a class="btn btn-primary" data-magnetic data-primary data-asset="TRACE-macOS-x86_64.dmg" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-macOS-x86_64.dmg">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Télécharger le .dmg
         </a>
         <a class="dl-alt" data-asset="TRACE-macOS-x86_64.zip" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-macOS-x86_64.zip">ou l'archive .zip</a>
         <p class="dl-meta" data-meta>Environ 250 Mo</p>
       </article>
+      <article class="dl-card reveal" data-spot data-system="windows" data-arch="x86_64">
+        <p class="dl-badge" hidden>Recommandé pour cet ordinateur</p>
+        <h3>Windows</h3>
+        <p class="dl-sub">Windows 10 ou 11, 64 bits.</p>
+        <a class="btn btn-primary" data-magnetic data-primary data-asset="TRACE-windows-x86_64.zip" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-windows-x86_64.zip">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Télécharger le .zip
+        </a>
+        <p class="dl-meta" data-meta>Environ 205 Mo</p>
+      </article>
+      <article class="dl-card reveal" data-spot data-system="linux" data-arch="x86_64">
+        <p class="dl-badge" hidden>Recommandé pour cet ordinateur</p>
+        <h3>Linux</h3>
+        <p class="dl-sub">64 bits, glibc 2.35 ou plus récente&nbsp;: Ubuntu 22.04, Debian 12, Fedora récentes.</p>
+        <a class="btn btn-primary" data-magnetic data-primary data-asset="TRACE-linux-x86_64.tar.gz" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-linux-x86_64.tar.gz">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Télécharger le .tar.gz
+        </a>
+        <p class="dl-meta" data-meta>Environ 245 Mo</p>
+      </article>
     </div>
 
     <div class="needs reveal">
       <h3>Ce qu'il vous faut</h3>
       <ul>
-        <li><strong>macOS 15 ou plus récent.</strong> Pour connaître votre processeur&nbsp;: menu Pomme, puis «&nbsp;À propos de ce Mac&nbsp;».</li>
-        <li><strong>Codex CLI, connecté à votre compte.</strong> Le maître du jeu et les illustrations passent par lui. TRACE ne copie ni jeton ni dossier de configuration.</li>
+        <li><strong>Un assistant en ligne de commande, connecté à votre compte&nbsp;: Codex CLI ou Claude Code.</strong> Le maître du jeu passe par lui. TRACE ne copie ni jeton ni dossier de configuration.</li>
         <li><strong>Une connexion Internet</strong> pendant le jeu.</li>
       </ul>
-      <p>Python, la base des comptes et tout le reste sont déjà dans l'application. Rien d'autre à installer.</p>
+      <p>Python, la base des comptes et tout le reste sont déjà dans le paquet. Rien d'autre à installer.</p>
+    </div>
+
+    <div class="assistants reveal">
+      <h3>Codex ou Claude Code&nbsp;: la seule différence</h3>
+      <div class="assistants-grid">
+        <div>
+          <h4>Avec Codex CLI</h4>
+          <p>Le jeu complet&nbsp;: campagnes, création libre, <strong>scènes illustrées et portraits générés</strong>.</p>
+        </div>
+        <div>
+          <h4>Avec Claude Code</h4>
+          <p>Le même jeu, les mêmes règles et les mêmes campagnes, <strong>sans génération de visuels</strong>&nbsp;: ni illustration de scène, ni portrait généré. Vous pouvez toujours importer un portrait.</p>
+        </div>
+      </div>
+      <p>Si les deux sont installés, TRACE prend Codex par défaut&nbsp;; le choix se change dans l'application.</p>
     </div>
   </div>
 </section>
@@ -284,7 +318,7 @@
   <div class="wrap">
     <p class="kicker reveal">Installer</p>
     <h2 class="reveal">Deux façons de faire</h2>
-    <p class="section-lede reveal">Suivez les étapes vous-même, ou confiez-les à un agent de code comme Codex en lui donnant le prompt prêt à copier.</p>
+    <p class="section-lede reveal">Suivez les étapes vous-même, ou confiez-les à un agent de code, Codex ou Claude Code, en lui donnant le prompt prêt à copier.</p>
 
     <div class="tabs reveal" id="install-tabs">
       <div class="tablist" role="tablist" aria-label="Méthode d'installation">
@@ -295,48 +329,59 @@
       <div class="tabpanel" role="tabpanel" id="panel-manual" aria-labelledby="tab-manual">
         <ol class="steps">
           <li>
-            <h3>Installez Codex CLI et connectez-vous</h3>
-            <p>Dans le Terminal, installez la commande puis ouvrez une session avec votre compte. L'application graphique Codex seule ne suffit pas toujours.</p>
+            <h3>Installez un assistant et connectez-vous</h3>
+            <p>Un seul suffit. Dans un terminal, installez Codex CLI puis ouvrez une session&nbsp;:</p>
             <pre class="code"><code>npm install -g @openai/codex
 codex login</code><button type="button" class="copy" data-copy>Copier</button></pre>
+            <p class="step-or">Ou Claude Code, sur macOS et Linux&nbsp;:</p>
+            <pre class="code"><code>curl -fsSL https://claude.ai/install.sh | bash
+claude auth login</code><button type="button" class="copy" data-copy>Copier</button></pre>
+            <p class="step-or">Claude Code sur Windows, dans PowerShell&nbsp;:</p>
+            <pre class="code"><code>irm https://claude.ai/install.ps1 | iex
+claude auth login</code><button type="button" class="copy" data-copy>Copier</button></pre>
+            <p class="step-or">Avec Claude Code, TRACE ne génère ni illustrations ni portraits.</p>
           </li>
           <li>
-            <h3>Téléchargez le paquet de votre Mac</h3>
-            <p>Prenez le fichier <code>.dmg</code> <a href="#telecharger">Apple Silicon ou Intel</a>, ouvrez-le, puis glissez <strong>TRACE</strong> dans le dossier Applications.</p>
+            <h3>Téléchargez le paquet de votre ordinateur</h3>
+            <p><strong>Mac&nbsp;:</strong> ouvrez le <code>.dmg</code> et glissez <strong>TRACE</strong> dans Applications. <strong>Windows&nbsp;:</strong> extrayez le <code>.zip</code> dans un dossier à vous, par exemple Documents. <strong>Linux&nbsp;:</strong> extrayez le <code>.tar.gz</code>. Les paquets sont <a href="#telecharger">plus haut sur cette page</a>.</p>
           </li>
           <li>
             <h3>Autorisez le premier lancement</h3>
-            <p>L'application n'est pas encore notarisée par Apple, donc macOS la bloque à la première ouverture. Ouvrez <strong>Réglages Système → Confidentialité et sécurité</strong>, puis cliquez sur «&nbsp;Ouvrir quand même&nbsp;». Vous pouvez aussi lever le blocage dans le Terminal, pour cette application seulement&nbsp;:</p>
+            <p><strong>Mac&nbsp;:</strong> l'application n'est pas encore notarisée par Apple. Ouvrez <strong>Réglages Système → Confidentialité et sécurité</strong>, puis cliquez sur «&nbsp;Ouvrir quand même&nbsp;», ou levez le blocage pour cette application seulement&nbsp;:</p>
             <pre class="code"><code>xattr -dr com.apple.quarantine /Applications/TRACE.app</code><button type="button" class="copy" data-copy>Copier</button></pre>
+            <p class="step-or"><strong>Windows&nbsp;:</strong> lancez <code>TRACE.exe</code>. Si «&nbsp;Windows a protégé votre ordinateur&nbsp;» s'affiche, choisissez «&nbsp;Informations complémentaires&nbsp;», puis «&nbsp;Exécuter quand même&nbsp;»&nbsp;: l'application n'est pas signée.</p>
+            <p class="step-or"><strong>Linux&nbsp;:</strong> lancez le programme depuis le dossier extrait. <code>install.sh</code> l'ajoute au menu des applications.</p>
+            <pre class="code"><code>./TRACE/trace</code><button type="button" class="copy" data-copy>Copier</button></pre>
           </li>
           <li>
             <h3>Créez votre compte local et jouez</h3>
-            <p>Au démarrage, TRACE vérifie que Codex répond. Créez ensuite un compte dans l'interface&nbsp;: il n'existe que sur votre Mac. Choisissez une campagne ou décrivez votre monde.</p>
+            <p>Au démarrage, TRACE vérifie que l'assistant répond. Sur Windows et Linux, le jeu s'ouvre dans votre navigateur et une petite fenêtre TRACE reste ouverte&nbsp;: fermez-la pour arrêter le jeu. Créez ensuite un compte dans l'interface&nbsp;: il n'existe que sur votre ordinateur.</p>
           </li>
         </ol>
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-prompt" aria-labelledby="tab-prompt" hidden>
-        <p class="prompt-intro">Collez ce texte dans Codex, ou dans un autre agent qui a accès au Terminal de votre Mac. Il s'arrêtera dès qu'une étape demande une action de votre part.</p>
-        <pre class="code code-prompt"><code id="prompt-text">Installe le jeu TRACE sur ce Mac. Procède étape par étape et arrête-toi pour me demander dès qu'une étape exige une action de ma part. Ne saisis jamais de mot de passe ni de code à ma place.
+        <p class="prompt-intro">Collez ce texte dans Codex ou dans Claude Code, sur l'ordinateur où vous voulez jouer. L'agent s'arrêtera dès qu'une étape demande une action de votre part.</p>
+        <pre class="code code-prompt"><code id="prompt-text">Installe le jeu TRACE sur cet ordinateur. Procède étape par étape et arrête-toi pour me demander dès qu'une étape exige une action de ma part. Ne saisis jamais de mot de passe ni de code à ma place.
 
-1. Vérifie que macOS est en version 15 ou plus (sw_vers) et note l'architecture (uname -m : arm64 ou x86_64). Si macOS est plus ancien, arrête-toi et dis-le-moi.
+1. Identifie le système et le processeur. TRACE existe pour macOS 15 ou plus (arm64 ou x86_64), Windows 10 ou 11 en 64 bits, et Linux x86_64 avec glibc 2.35 ou plus. Si l'ordinateur ne convient pas, arrête-toi et dis-le-moi.
 
-2. TRACE a besoin de Codex CLI connecté à mon compte. Vérifie codex --version et codex login status. Si la commande manque, propose de l'installer. Si je ne suis pas connecté, demande-moi de lancer moi-même codex login.
+2. TRACE a besoin d'un assistant en ligne de commande connecté à mon compte : Codex CLI (codex --version, codex login status) ou Claude Code (claude --version, claude auth status). Vérifie lequel est installé et connecté. S'il en manque un, propose de l'installer. Si je ne suis pas connecté, demande-moi de lancer moi-même codex login ou claude auth login. Préviens-moi qu'avec Claude Code le jeu ne génère ni illustrations ni portraits.
 
-3. Télécharge le paquet qui correspond à l'architecture dans ~/Downloads :
-   curl -fL -o ~/Downloads/TRACE.dmg https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-macOS-ARCH.dmg
-   (remplace ARCH par arm64 ou x86_64).
+3. Télécharge le paquet qui correspond, depuis https://github.com/vlefils/trace-releases/releases/latest/download/ :
+   - Mac Apple Silicon : TRACE-macOS-arm64.dmg ; Mac Intel : TRACE-macOS-x86_64.dmg
+   - Windows : TRACE-windows-x86_64.zip
+   - Linux : TRACE-linux-x86_64.tar.gz
 
-4. Monte le DMG avec hdiutil attach, copie TRACE.app dans /Applications avec ditto, puis démonte le DMG avec hdiutil detach. Si une ancienne TRACE.app existe, vérifie qu'elle est fermée avant de la remplacer. Ne touche jamais à ~/Library/Application Support/TRACE/ : ce dossier contient mes parties et mes comptes.
+4. Installe-le sans toucher à mes parties existantes :
+   - Mac : monte le DMG (hdiutil attach), copie TRACE.app dans /Applications (ditto), démonte-le. Si l'application porte l'attribut de quarantaine, retire-le sur elle seule : xattr -dr com.apple.quarantine /Applications/TRACE.app
+   - Windows : extrais l'archive dans un dossier de mon profil, par exemple Documents\TRACE.
+   - Linux : extrais l'archive dans mon dossier personnel, puis lance TRACE/install.sh pour l'ajouter au menu.
+   Si une ancienne version existe, vérifie qu'elle est fermée avant de la remplacer. Ne supprime jamais le dossier des sauvegardes : ~/Library/Application Support/TRACE sur Mac, %LOCALAPPDATA%\TRACE sur Windows, ~/.local/share/TRACE sur Linux. Ne modifie aucun réglage de sécurité global.
 
-5. L'application n'est pas notarisée. Si elle porte l'attribut de quarantaine, retire-le uniquement sur elle :
-   xattr -dr com.apple.quarantine /Applications/TRACE.app
-   Ne modifie aucun réglage de sécurité global du Mac.
+5. Lance TRACE (open -a TRACE sur Mac, TRACE.exe sur Windows, TRACE/trace sur Linux) et vérifie qu'il démarre. Sur Windows et Linux, le jeu s'ouvre dans le navigateur et une petite fenêtre TRACE reste ouverte. En cas d'échec, montre-moi la fin de logs/desktop.log dans le dossier des sauvegardes.
 
-6. Ouvre TRACE (open -a TRACE) et vérifie qu'une fenêtre s'affiche. En cas d'échec, montre-moi la fin de ~/Library/Application Support/TRACE/logs/desktop.log. Si TRACE ne trouve pas Codex, indique-moi le menu TRACE → Choisir Codex CLI… et le chemin donné par which codex.
-
-Termine en me disant ce qui a été installé, où, et ce qu'il me reste à faire : créer un compte local dans l'interface de TRACE.</code><button type="button" class="copy" data-copy>Copier le prompt</button></pre>
+Termine en me disant ce qui a été installé, où, avec quel assistant, et ce qu'il me reste à faire : créer un compte local dans l'interface de TRACE.</code><button type="button" class="copy" data-copy>Copier le prompt</button></pre>
       </div>
     </div>
   </div>
@@ -350,7 +395,11 @@ Termine en me disant ce qui a été installé, où, et ce qu'il me reste à fair
     <div class="faq reveal">
       <details>
         <summary>TRACE est-il payant ?</summary>
-        <p>L'application ne demande ni abonnement ni paiement. Le maître du jeu et les illustrations utilisent votre propre compte Codex&nbsp;: ses capacités et ses quotas s'appliquent, pour le texte comme pour les images.</p>
+        <p>L'application ne demande ni abonnement ni paiement. Le maître du jeu utilise votre propre compte Codex ou Claude&nbsp;: ses capacités et ses quotas s'appliquent.</p>
+      </details>
+      <details>
+        <summary>Quelle différence entre Codex et Claude Code ?</summary>
+        <p>Le jeu est le même. Seul Codex sait produire des images&nbsp;: avec Claude Code, il n'y a ni illustration de scène ni portrait généré, et l'interface vous le rappelle. Vous pouvez changer d'assistant dans l'application sans perdre vos parties.</p>
       </details>
       <details>
         <summary>Peut-on jouer hors ligne ?</summary>
@@ -358,19 +407,15 @@ Termine en me disant ce qui a été installé, où, et ce qu'il me reste à fair
       </details>
       <details>
         <summary>Où sont enregistrées mes parties ?</summary>
-        <p>Sur votre Mac, dans <code>~/Library/Application Support/TRACE/</code>. Ce dossier contient les comptes, les parties, les notes du maître du jeu et les illustrations. Remplacer l'application par une version plus récente ne le modifie pas.</p>
+        <p>Sur votre ordinateur&nbsp;: <code>~/Library/Application Support/TRACE/</code> sur Mac, <code>%LOCALAPPDATA%\TRACE\</code> sur Windows, <code>~/.local/share/TRACE/</code> sur Linux. Ce dossier contient les comptes, les parties, les notes du maître du jeu et les illustrations. Remplacer l'application par une version plus récente ne le modifie pas.</p>
       </details>
       <details>
-        <summary>macOS refuse d'ouvrir l'application</summary>
-        <p>C'est attendu au premier lancement, tant que l'application n'est pas notarisée. Passez par <strong>Réglages Système → Confidentialité et sécurité → Ouvrir quand même</strong>, ou utilisez la commande <code>xattr</code> du guide d'installation.</p>
+        <summary>Mon système refuse d'ouvrir l'application</summary>
+        <p>C'est attendu au premier lancement&nbsp;: l'application n'est ni notarisée par Apple ni signée pour Windows. Sur Mac, passez par <strong>Réglages Système → Confidentialité et sécurité → Ouvrir quand même</strong>. Sur Windows, choisissez «&nbsp;Informations complémentaires&nbsp;» puis «&nbsp;Exécuter quand même&nbsp;».</p>
       </details>
       <details>
-        <summary>TRACE ne trouve pas Codex</summary>
-        <p>Ouvrez le menu <strong>TRACE → Choisir Codex CLI…</strong> et indiquez l'emplacement de la commande. Dans le Terminal, <code>which codex</code> vous donne ce chemin. Vérifiez aussi que <code>codex login status</code> vous montre connecté.</p>
-      </details>
-      <details>
-        <summary>Existe-t-il une version Windows ou Linux ?</summary>
-        <p>Pas pour l'instant. Seuls les paquets macOS, Apple Silicon et Intel, sont publiés.</p>
+        <summary>TRACE ne trouve pas mon assistant</summary>
+        <p>Sur Mac, ouvrez le menu <strong>TRACE → Assistant</strong>&nbsp;; sur Windows et Linux, le bouton <strong>Assistant…</strong> de la fenêtre TRACE. Vous pouvez y choisir Codex ou Claude Code et indiquer l'emplacement de la commande. Vérifiez aussi que <code>codex login status</code> ou <code>claude auth status</code> vous montre connecté.</p>
       </details>
     </div>
   </div>

@@ -462,32 +462,36 @@ void main(){
       if (asset && asset.browser_download_url) link.href = asset.browser_download_url;
     }
     for (const card of $$(".dl-card")) {
-      const asset = assets.get(`TRACE-macOS-${card.dataset.arch}.dmg`);
+      const asset = assets.get($("[data-primary]", card).dataset.asset);
       if (!asset) continue;
       $("[data-meta]", card).textContent = [version && `Version ${version}`, date, `${Math.round(asset.size / 1e6)} Mo`].filter(Boolean).join(" · ");
     }
     if (version) {
-      $("#release-line").textContent = `Version ${version}${date ? `, publiée le ${date}` : ""}. Choisissez le paquet qui correspond au processeur de votre Mac.`;
-      $("#hero-note").textContent = `Version ${version} · macOS 15 ou plus récent · Apple Silicon et Intel`;
+      $("#release-line").textContent = `Version ${version}${date ? `, publiée le ${date}` : ""}. Choisissez le paquet de votre ordinateur.`;
+      $("#hero-note").textContent = `Version ${version} · macOS, Windows et Linux · avec Codex CLI ou Claude Code`;
     }
   });
 
-  /* ── Reconnaître le Mac du visiteur quand le navigateur le permet ── */
+  /* ── Recommander le paquet du visiteur quand le navigateur le permet ── */
   safely("platform", async () => {
     const agent = navigator.userAgent, data = navigator.userAgentData;
     const platform = (data && data.platform) || navigator.platform || "";
     const mobileApple = /iPhone|iPad|iPod/.test(agent) || (/Mac/.test(platform) && navigator.maxTouchPoints > 1);
-    const mac = /mac/i.test(platform) && !mobileApple;
-    if (!mac) {
-      const device = mobileApple ? "un iPhone ou un iPad" : /Android/.test(agent) ? "un appareil Android"
-        : /Win/.test(platform) ? "un PC sous Windows" : /Linux/.test(platform) ? "un ordinateur sous Linux" : "";
-      if (device) {
-        const notice = $("#platform-notice");
-        notice.textContent = `Vous consultez cette page depuis ${device}. TRACE s’installe sur un Mac : gardez ce lien pour y revenir depuis votre Mac.`;
-        notice.hidden = false;
-      }
+    const recommend = (system, arch) => {
+      const card = $(`.dl-card[data-system="${system}"][data-arch="${arch}"]`);
+      if (!card) return;
+      card.classList.add("is-match");
+      $(".dl-badge", card).hidden = false;
+    };
+    if (mobileApple || /Android/.test(agent)) {
+      const notice = $("#platform-notice");
+      notice.textContent = "Vous consultez cette page depuis un téléphone ou une tablette. TRACE s’installe sur un ordinateur : gardez ce lien pour y revenir.";
+      notice.hidden = false;
       return;
     }
+    if (/Win/.test(platform)) return recommend("windows", "x86_64");
+    if (/Linux/.test(platform)) return recommend("linux", "x86_64");
+    if (!/mac/i.test(platform)) return;
     let arch = null;
     if (data && data.getHighEntropyValues) {
       try { const values = await data.getHighEntropyValues(["architecture"]); arch = values.architecture === "arm" ? "arm64" : values.architecture === "x86" ? "x86_64" : null; } catch { /* inconnu */ }
@@ -500,9 +504,6 @@ void main(){
         if (/Apple M\d/.test(name)) arch = "arm64"; else if (/Intel|AMD|Radeon/.test(name)) arch = "x86_64";
       } catch { /* inconnu */ }
     }
-    const card = arch && $(`.dl-card[data-arch="${arch}"]`);
-    if (!card) return;   // Safari masque le processeur : aucune recommandation plutôt qu'une fausse.
-    card.classList.add("is-match");
-    $(".dl-badge", card).hidden = false;
+    if (arch) recommend("macos", arch);   // Safari masque le processeur : aucune recommandation plutôt qu'une fausse.
   });
 })();
