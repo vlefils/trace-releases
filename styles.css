@@ -303,6 +303,12 @@ body::after {
 .agent > p { padding: 0 1.3rem; color: var(--text-2); }
 .agent .code { margin: 1rem 1.3rem 1.3rem; }
 .tablist { flex-wrap: wrap; }
+.steps-manual { margin: .6rem 1.3rem 1.5rem; }
+.steps-manual li::before { width: 2.1rem; height: 2.1rem; font-size: 1.1rem; }
+.steps-manual li { padding-left: 3.4rem; }
+.steps-manual li::after { left: 1.05rem; top: 2.2rem; }
+.steps-manual h3 { font-size: 1.35rem; }
+.steps .code-prompt { max-height: 22rem; overflow-y: auto; }
 
 /* ── Questions ── */
 .faq { margin-top: 2.2rem; border-top: 1px solid var(--line); }

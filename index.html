@@ -77,7 +77,7 @@
       </a>
       <a class="btn btn-ghost" href="#demo">Jouer une scène d'essai</a>
     </div>
-    <p class="hero-note" id="hero-note">macOS, Windows et Linux · avec Codex CLI ou Claude Code</p>
+    <p class="hero-note" id="hero-note">macOS, Windows et Linux · avec Codex ou Claude Code</p>
   </div>
 
   <div class="worlds-switch" id="worlds-switch" role="group" aria-label="Choisir le décor affiché">
@@ -113,7 +113,7 @@
       <article class="card reveal" data-spot>
         <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4l10.5 6v12L16 28 5.5 22V10L16 4zM16 4v8m0 0l10.5-2M16 12L5.5 10M16 12l-5 9m5-9l5 9m-10 0h10m-10 0l-5.5 1m15.5-1l5.5 1M11 21l5 7 5-7"/></svg>
         <h3>Le moteur tient les comptes</h3>
-        <p>Jets de dés, points de vie, argent, inventaire, trajets&nbsp;: ces valeurs sont calculées par le moteur, jamais inventées au fil du récit.</p>
+        <p>Règles de la cinquième édition&nbsp;: caractéristiques, compétences, niveaux et points de vie sont calculés par le moteur. Chaque jet et chaque blessure s'affichent sous le récit, si vous le souhaitez.</p>
       </article>
       <article class="card reveal" data-spot>
         <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 5h15a3 3 0 013 3v19H10a3 3 0 01-3-3V5zm0 19a3 3 0 013-3h15M12 10h8m-8 4h6"/></svg>
@@ -123,7 +123,7 @@
       <article class="card reveal" data-spot>
         <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7h22v18H5V7zm0 14l6.5-6.5 5 5 3.5-3.5L27 23M20.5 12.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
         <h3>Des scènes illustrées</h3>
-        <p>Le MJ choisit les moments qui méritent une image. L'illustration suit la scène et reprend le portrait de votre personnage. Avec Codex uniquement.</p>
+        <p>Chaque nouveau lieu et chaque nouveau visage reçoivent leur image, et le MJ en ajoute aux moments forts. Votre portrait, généré à la création, sert de référence. Avec Codex uniquement.</p>
       </article>
       <article class="card reveal" data-spot>
         <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 13H4V8m0 5c2.5-4.5 7-7 12-7 6.5 0 12 5 12 11s-5.5 11-12 11c-4.5 0-8.5-2.5-10.5-6"/></svg>
@@ -176,8 +176,8 @@
 <section class="section" id="mondes" data-section>
   <div class="wrap">
     <p class="kicker reveal">Mondes</p>
-    <h2 class="reveal">Trois campagnes, puis les vôtres</h2>
-    <p class="section-lede reveal">Chaque campagne a son ton, ses lieux et ses personnages. Quand vous les aurez épuisées, décrivez votre propre monde.</p>
+    <h2 class="reveal">Votre monde, ou trois campagnes</h2>
+    <p class="section-lede reveal">Décrivez une idée, ou composez votre monde étape par étape&nbsp;: genre, époque, merveilleux, ton. Le MJ en tire une présentation de l'univers et une quête épique. Trois campagnes écrites attendent aussi, chacune avec son ton, ses lieux et ses personnages.</p>
   </div>
 
   <div class="worlds reveal" id="worlds">
@@ -290,7 +290,7 @@
     <div class="needs reveal">
       <h3>Ce qu'il vous faut</h3>
       <ul>
-        <li><strong>Un assistant en ligne de commande, connecté à votre compte&nbsp;: Codex CLI ou Claude Code.</strong> Le maître du jeu passe par lui. TRACE ne copie ni jeton ni dossier de configuration.</li>
+        <li><strong>Codex ou Claude Code, connecté à votre compte.</strong> Le maître du jeu passe par lui. L'<a href="https://learn.chatgpt.com/docs/app" target="_blank" rel="noopener">application Codex</a> suffit&nbsp;: aucune ligne de commande n'est nécessaire. TRACE ne copie ni jeton ni dossier de configuration.</li>
         <li><strong>Une connexion Internet</strong> pendant le jeu.</li>
       </ul>
       <p>Python, la base des comptes et tout le reste sont déjà dans le paquet. Rien d'autre à installer.</p>
@@ -300,7 +300,7 @@
       <h3>Codex ou Claude Code&nbsp;: la seule différence</h3>
       <div class="assistants-grid">
         <div>
-          <h4>Avec Codex CLI</h4>
+          <h4>Avec Codex</h4>
           <p>Le jeu complet&nbsp;: campagnes, création libre, <strong>scènes illustrées et portraits générés</strong>.</p>
         </div>
         <div>
@@ -318,7 +318,7 @@
   <div class="wrap">
     <p class="kicker reveal">Installer</p>
     <h2 class="reveal">Un parcours par système</h2>
-    <p class="section-lede reveal">Choisissez votre ordinateur. Chaque parcours va de l'assistant au premier lancement, et propose un prompt prêt à copier si vous préférez confier l'installation à un agent.</p>
+    <p class="section-lede reveal">Choisissez votre ordinateur. Le plus simple&nbsp;: installez Codex, donnez-lui le prompt, et il s'occupe du reste. Aucune ligne de commande à taper.</p>
 
     <div class="tabs reveal" id="install-tabs">
       <div class="tablist" role="tablist" aria-label="Système de l'ordinateur">
@@ -331,40 +331,19 @@
         <p class="journey-lede">Pour macOS 15 ou plus récent. Le jeu s'ouvre dans sa propre fenêtre.</p>
         <ol class="steps">
           <li>
-            <h3>Installez un assistant et connectez-vous</h3>
-            <p>Le maître du jeu passe par un assistant en ligne de commande. Un seul suffit. Dans le Terminal, pour Codex CLI&nbsp;:</p>
-            <pre class="code"><code>npm install -g @openai/codex
-codex login</code><button type="button" class="copy" data-copy>Copier</button></pre>
-            <p class="step-or">Ou pour Claude Code&nbsp;:</p>
-            <pre class="code"><code>curl -fsSL https://claude.ai/install.sh | bash
-claude auth login</code><button type="button" class="copy" data-copy>Copier</button></pre>
-            <p class="step-note">Avec Claude Code, TRACE ne génère ni illustrations ni portraits. Le reste du jeu est identique.</p>
+            <h3>Installez Codex et connectez-vous</h3>
+            <p>Téléchargez l'application Codex sur son site, ouvrez-la et connectez-vous avec votre compte ChatGPT. TRACE s'en sert ensuite pour son maître du jeu.</p>
+            <p class="step-buttons"><a class="btn btn-primary btn-small" href="https://learn.chatgpt.com/docs/app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5m0-5-8 8M11 6H6v12h12v-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Télécharger Codex</a></p>
+            <p class="step-note">Vous préférez Claude Code&nbsp;? Suivez sa <a href="https://code.claude.com/docs/en/setup" target="_blank" rel="noopener">page d'installation</a>. Avec lui, TRACE ne génère ni illustrations ni portraits&nbsp;; le reste du jeu est identique.</p>
           </li>
           <li>
-            <h3>Téléchargez TRACE pour votre Mac</h3>
-            <p>Pour connaître votre processeur&nbsp;: menu Pomme, puis «&nbsp;À propos de ce Mac&nbsp;». «&nbsp;Puce Apple&nbsp;» correspond à Apple Silicon.</p>
-            <p class="step-buttons"><a class="btn btn-primary btn-small" data-asset="TRACE-macOS-arm64.dmg" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-macOS-arm64.dmg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Apple Silicon (.dmg)</a><a class="btn btn-primary btn-small" data-asset="TRACE-macOS-x86_64.dmg" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-macOS-x86_64.dmg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Intel (.dmg)</a></p>
-            <p class="step-or">Ouvrez le fichier <code>.dmg</code>, puis glissez <strong>TRACE</strong> dans le dossier Applications.</p>
-          </li>
-          <li>
-            <h3>Autorisez le premier lancement</h3>
-            <p>L'application n'est pas encore notarisée par Apple, donc macOS la bloque à la première ouverture. Ouvrez <strong>Réglages Système → Confidentialité et sécurité</strong>, puis cliquez sur «&nbsp;Ouvrir quand même&nbsp;». Vous pouvez aussi lever le blocage dans le Terminal, pour cette application seulement&nbsp;:</p>
-            <pre class="code"><code>xattr -dr com.apple.quarantine /Applications/TRACE.app</code><button type="button" class="copy" data-copy>Copier</button></pre>
-          </li>
-          <li>
-            <h3>Créez votre compte local et jouez</h3>
-            <p>Au démarrage, TRACE vérifie que l'assistant répond. Créez ensuite un compte dans l'interface&nbsp;: il n'existe que sur votre Mac. Le menu <strong>TRACE → Assistant</strong> permet de passer de Codex à Claude Code.</p>
-            <p class="step-note">Vos parties sont dans <code>~/Library/Application Support/TRACE/</code>.</p>
-          </li>
-        </ol>
-        <details class="agent">
-          <summary>Confier l'installation à un agent, Codex ou Claude Code</summary>
-          <p>Collez ce texte dans l'agent, sur le Mac où vous voulez jouer. Il s'arrêtera dès qu'une étape demande une action de votre part.</p>
-          <pre class="code code-prompt"><code data-prompt>Installe le jeu TRACE sur ce Mac. Procède étape par étape et arrête-toi pour me demander dès qu'une étape exige une action de ma part. Ne saisis jamais de mot de passe ni de code à ma place.
+            <h3>Donnez ce prompt à Codex</h3>
+            <p>Copiez ce texte et collez-le dans Codex, sur le Mac où vous voulez jouer. Il télécharge TRACE, l'installe et le lance, et s'arrête dès qu'une étape demande une action de votre part.</p>
+            <pre class="code code-prompt"><code data-prompt>Installe le jeu TRACE sur ce Mac. Procède étape par étape et arrête-toi pour me demander dès qu'une étape exige une action de ma part. Ne saisis jamais de mot de passe ni de code à ma place.
 
 1. Vérifie que macOS est en version 15 ou plus (sw_vers) et note le processeur (uname -m : arm64 ou x86_64). Si macOS est plus ancien, arrête-toi et dis-le-moi.
 
-2. TRACE a besoin d'un assistant en ligne de commande connecté à mon compte : Codex CLI (codex --version, codex login status) ou Claude Code (claude --version, claude auth status). Vérifie lequel est installé et connecté. S'il en manque un, propose de l'installer. Si je ne suis pas connecté, demande-moi de lancer moi-même codex login ou claude auth login. Préviens-moi qu'avec Claude Code le jeu ne génère ni illustrations ni portraits.
+2. TRACE fait vivre son maître du jeu avec l'assistant de cet ordinateur. Si tu es Codex, l'application dans laquelle je te parle suffit : TRACE trouve sa commande tout seul, n'installe rien de plus. Si tu es Claude Code, vérifie claude --version et claude auth status ; si je ne suis pas connecté, demande-moi de lancer moi-même claude auth login, et préviens-moi qu'avec Claude Code le jeu ne génère ni illustrations ni portraits.
 
 3. Télécharge dans ~/Downloads le paquet du processeur :
    curl -fL -o ~/Downloads/TRACE.dmg https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-macOS-arm64.dmg
@@ -376,9 +355,38 @@ claude auth login</code><button type="button" class="copy" data-copy>Copier</but
    xattr -dr com.apple.quarantine /Applications/TRACE.app
    Ne modifie aucun réglage de sécurité global du Mac.
 
-6. Ouvre TRACE (open -a TRACE) et vérifie qu'une fenêtre s'affiche. En cas d'échec, montre-moi la fin de ~/Library/Application Support/TRACE/logs/desktop.log.
+6. Ouvre TRACE (open -a TRACE) et vérifie qu'une fenêtre s'affiche. Si TRACE dit qu'il ne trouve pas l'assistant, cherche l'exécutable codex ou claude sur ce Mac et donne-moi son chemin : je le choisirai dans le menu TRACE → Assistant. En cas d'autre échec, montre-moi la fin de ~/Library/Application Support/TRACE/logs/desktop.log.
 
 Termine en me disant ce qui a été installé, où, avec quel assistant, et ce qu'il me reste à faire : créer un compte local dans l'interface de TRACE.</code><button type="button" class="copy" data-copy>Copier le prompt</button></pre>
+          </li>
+          <li>
+            <h3>Créez votre compte local et jouez</h3>
+            <p>TRACE vérifie que l'assistant répond, puis ouvre sa fenêtre. Créez un compte dans l'interface&nbsp;: il n'existe que sur votre Mac. Le menu <strong>TRACE → Assistant</strong> permet de passer de Codex à Claude Code. Vos parties sont dans <code>~/Library/Application Support/TRACE/</code>.</p>
+          </li>
+        </ol>
+        <details class="agent">
+          <summary>Installer à la main, sans agent</summary>
+          <ol class="steps steps-manual">
+            <li>
+              <h3>Ayez Codex ou Claude Code, connecté</h3>
+              <p>L'application Codex suffit. Si vous préférez la ligne de commande, dans le Terminal, pour Codex CLI puis pour Claude Code&nbsp;:</p>
+              <pre class="code"><code>npm install -g @openai/codex
+codex login</code><button type="button" class="copy" data-copy>Copier</button></pre>
+              <pre class="code"><code>curl -fsSL https://claude.ai/install.sh | bash
+claude auth login</code><button type="button" class="copy" data-copy>Copier</button></pre>
+            </li>
+            <li>
+              <h3>Téléchargez TRACE pour votre Mac</h3>
+              <p>Pour connaître votre processeur&nbsp;: menu Pomme, puis «&nbsp;À propos de ce Mac&nbsp;». «&nbsp;Puce Apple&nbsp;» correspond à Apple Silicon.</p>
+              <p class="step-buttons"><a class="btn btn-primary btn-small" data-asset="TRACE-macOS-arm64.dmg" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-macOS-arm64.dmg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Apple Silicon (.dmg)</a><a class="btn btn-primary btn-small" data-asset="TRACE-macOS-x86_64.dmg" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-macOS-x86_64.dmg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Intel (.dmg)</a></p>
+              <p class="step-or">Ouvrez le fichier <code>.dmg</code>, puis glissez <strong>TRACE</strong> dans le dossier Applications.</p>
+            </li>
+            <li>
+              <h3>Autorisez le premier lancement</h3>
+              <p>L'application n'est pas encore notarisée par Apple, donc macOS la bloque à la première ouverture. Ouvrez <strong>Réglages Système → Confidentialité et sécurité</strong>, puis cliquez sur «&nbsp;Ouvrir quand même&nbsp;». Vous pouvez aussi lever le blocage dans le Terminal, pour cette application seulement&nbsp;:</p>
+              <pre class="code"><code>xattr -dr com.apple.quarantine /Applications/TRACE.app</code><button type="button" class="copy" data-copy>Copier</button></pre>
+            </li>
+          </ol>
         </details>
       </div>
 
@@ -386,38 +394,19 @@ Termine en me disant ce qui a été installé, où, avec quel assistant, et ce q
         <p class="journey-lede">Pour Windows 10 ou 11, 64 bits. Le jeu s'ouvre dans votre navigateur.</p>
         <ol class="steps">
           <li>
-            <h3>Installez un assistant et connectez-vous</h3>
-            <p>Le maître du jeu passe par un assistant en ligne de commande. Un seul suffit. Dans PowerShell, pour Codex CLI&nbsp;:</p>
-            <pre class="code"><code>npm install -g @openai/codex
-codex login</code><button type="button" class="copy" data-copy>Copier</button></pre>
-            <p class="step-or">Ou pour Claude Code&nbsp;:</p>
-            <pre class="code"><code>irm https://claude.ai/install.ps1 | iex
-claude auth login</code><button type="button" class="copy" data-copy>Copier</button></pre>
-            <p class="step-note">Avec Claude Code, TRACE ne génère ni illustrations ni portraits. Le reste du jeu est identique.</p>
+            <h3>Installez Codex et connectez-vous</h3>
+            <p>Téléchargez l'application Codex sur son site, ouvrez-la et connectez-vous avec votre compte ChatGPT. TRACE s'en sert ensuite pour son maître du jeu.</p>
+            <p class="step-buttons"><a class="btn btn-primary btn-small" href="https://learn.chatgpt.com/docs/app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5m0-5-8 8M11 6H6v12h12v-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Télécharger Codex</a></p>
+            <p class="step-note">Vous préférez Claude Code&nbsp;? Suivez sa <a href="https://code.claude.com/docs/en/setup" target="_blank" rel="noopener">page d'installation</a>. Avec lui, TRACE ne génère ni illustrations ni portraits&nbsp;; le reste du jeu est identique.</p>
           </li>
           <li>
-            <h3>Téléchargez et extrayez TRACE</h3>
-            <p class="step-buttons"><a class="btn btn-primary btn-small" data-asset="TRACE-windows-x86_64.zip" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-windows-x86_64.zip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>TRACE pour Windows (.zip)</a></p>
-            <p class="step-or">Faites un clic droit sur l'archive, puis «&nbsp;Extraire tout&nbsp;», vers un dossier à vous comme <strong>Documents</strong>. Évitez «&nbsp;Program Files&nbsp;»&nbsp;: TRACE n'a pas besoin de droits d'administrateur.</p>
-          </li>
-          <li>
-            <h3>Lancez TRACE.exe</h3>
-            <p>Ouvrez le dossier <strong>TRACE</strong> extrait et lancez <code>TRACE.exe</code>. L'application n'est pas signée&nbsp;: si «&nbsp;Windows a protégé votre ordinateur&nbsp;» s'affiche, choisissez «&nbsp;Informations complémentaires&nbsp;», puis «&nbsp;Exécuter quand même&nbsp;».</p>
-          </li>
-          <li>
-            <h3>Créez votre compte local et jouez</h3>
-            <p>TRACE vérifie que l'assistant répond, puis ouvre le jeu dans votre navigateur. Une petite fenêtre TRACE reste ouverte&nbsp;: son bouton <strong>Assistant…</strong> permet de passer de Codex à Claude Code, et la fermer arrête le jeu. Créez ensuite un compte dans l'interface&nbsp;: il n'existe que sur votre PC.</p>
-            <p class="step-note">Vos parties sont dans <code>%LOCALAPPDATA%\TRACE\</code>.</p>
-          </li>
-        </ol>
-        <details class="agent">
-          <summary>Confier l'installation à un agent, Codex ou Claude Code</summary>
-          <p>Collez ce texte dans l'agent, sur le PC où vous voulez jouer. Il s'arrêtera dès qu'une étape demande une action de votre part.</p>
-          <pre class="code code-prompt"><code data-prompt>Installe le jeu TRACE sur ce PC Windows, avec PowerShell. Procède étape par étape et arrête-toi pour me demander dès qu'une étape exige une action de ma part. Ne saisis jamais de mot de passe ni de code à ma place.
+            <h3>Donnez ce prompt à Codex</h3>
+            <p>Copiez ce texte et collez-le dans Codex, sur le PC où vous voulez jouer. Il télécharge TRACE, l'installe et le lance, et s'arrête dès qu'une étape demande une action de votre part.</p>
+            <pre class="code code-prompt"><code data-prompt>Installe le jeu TRACE sur ce PC Windows, avec PowerShell. Procède étape par étape et arrête-toi pour me demander dès qu'une étape exige une action de ma part. Ne saisis jamais de mot de passe ni de code à ma place.
 
 1. Vérifie que Windows est en version 10 ou 11, en 64 bits. Sinon, arrête-toi et dis-le-moi.
 
-2. TRACE a besoin d'un assistant en ligne de commande connecté à mon compte : Codex CLI (codex --version, codex login status) ou Claude Code (claude --version, claude auth status). Vérifie lequel est installé et connecté. S'il en manque un, propose de l'installer. Si je ne suis pas connecté, demande-moi de lancer moi-même codex login ou claude auth login. Préviens-moi qu'avec Claude Code le jeu ne génère ni illustrations ni portraits.
+2. TRACE fait vivre son maître du jeu avec l'assistant de cet ordinateur. Si tu es Codex, l'application dans laquelle je te parle suffit : TRACE trouve sa commande tout seul, n'installe rien de plus. Si tu es Claude Code, vérifie claude --version et claude auth status ; si je ne suis pas connecté, demande-moi de lancer moi-même claude auth login, et préviens-moi qu'avec Claude Code le jeu ne génère ni illustrations ni portraits.
 
 3. Télécharge le paquet dans mon dossier Téléchargements :
    Invoke-WebRequest -Uri https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-windows-x86_64.zip -OutFile "$env:USERPROFILE\Downloads\TRACE-windows-x86_64.zip"
@@ -426,9 +415,36 @@ claude auth login</code><button type="button" class="copy" data-copy>Copier</but
 
 5. Lance Documents\TRACE\TRACE.exe. Le jeu s'ouvre dans le navigateur et une petite fenêtre TRACE reste ouverte : c'est normal. Si Windows affiche « Windows a protégé votre ordinateur », demande-moi de cliquer moi-même sur « Informations complémentaires », puis « Exécuter quand même ». Ne désactive aucune protection de Windows.
 
-6. Vérifie que le jeu démarre. En cas d'échec, montre-moi la fin de %LOCALAPPDATA%\TRACE\logs\desktop.log.
+6. Vérifie que le jeu démarre. Si TRACE dit qu'il ne trouve pas l'assistant, cherche l'exécutable codex ou claude sur ce PC et donne-moi son chemin : je le choisirai avec le bouton Assistant… de la fenêtre TRACE. En cas d'autre échec, montre-moi la fin de %LOCALAPPDATA%\TRACE\logs\desktop.log.
 
 Termine en me disant ce qui a été installé, où, avec quel assistant, et ce qu'il me reste à faire : créer un compte local dans l'interface de TRACE.</code><button type="button" class="copy" data-copy>Copier le prompt</button></pre>
+          </li>
+          <li>
+            <h3>Créez votre compte local et jouez</h3>
+            <p>TRACE vérifie que l'assistant répond, puis ouvre le jeu dans votre navigateur. Une petite fenêtre TRACE reste ouverte&nbsp;: son bouton <strong>Assistant…</strong> permet de passer de Codex à Claude Code, et la fermer arrête le jeu. Créez un compte dans l'interface&nbsp;: il n'existe que sur votre PC. Vos parties sont dans <code>%LOCALAPPDATA%\TRACE\</code>.</p>
+          </li>
+        </ol>
+        <details class="agent">
+          <summary>Installer à la main, sans agent</summary>
+          <ol class="steps steps-manual">
+            <li>
+              <h3>Ayez Codex ou Claude Code, connecté</h3>
+              <p>L'application Codex suffit. Si vous préférez la ligne de commande, dans PowerShell, pour Codex CLI puis pour Claude Code&nbsp;:</p>
+              <pre class="code"><code>npm install -g @openai/codex
+codex login</code><button type="button" class="copy" data-copy>Copier</button></pre>
+              <pre class="code"><code>irm https://claude.ai/install.ps1 | iex
+claude auth login</code><button type="button" class="copy" data-copy>Copier</button></pre>
+            </li>
+            <li>
+              <h3>Téléchargez et extrayez TRACE</h3>
+              <p class="step-buttons"><a class="btn btn-primary btn-small" data-asset="TRACE-windows-x86_64.zip" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-windows-x86_64.zip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>TRACE pour Windows (.zip)</a></p>
+              <p class="step-or">Faites un clic droit sur l'archive, puis «&nbsp;Extraire tout&nbsp;», vers un dossier à vous comme <strong>Documents</strong>. Évitez «&nbsp;Program Files&nbsp;»&nbsp;: TRACE n'a pas besoin de droits d'administrateur.</p>
+            </li>
+            <li>
+              <h3>Lancez TRACE.exe</h3>
+              <p>Ouvrez le dossier <strong>TRACE</strong> extrait et lancez <code>TRACE.exe</code>. L'application n'est pas signée&nbsp;: si «&nbsp;Windows a protégé votre ordinateur&nbsp;» s'affiche, choisissez «&nbsp;Informations complémentaires&nbsp;», puis «&nbsp;Exécuter quand même&nbsp;».</p>
+            </li>
+          </ol>
         </details>
       </div>
 
@@ -436,43 +452,19 @@ Termine en me disant ce qui a été installé, où, avec quel assistant, et ce q
         <p class="journey-lede">Pour Linux 64 bits avec glibc 2.35 ou plus récente&nbsp;: Ubuntu 22.04, Debian 12, Fedora récentes. Le jeu s'ouvre dans votre navigateur.</p>
         <ol class="steps">
           <li>
-            <h3>Installez un assistant et connectez-vous</h3>
-            <p>Le maître du jeu passe par un assistant en ligne de commande. Un seul suffit. Dans un terminal, pour Codex CLI&nbsp;:</p>
-            <pre class="code"><code>npm install -g @openai/codex
-codex login</code><button type="button" class="copy" data-copy>Copier</button></pre>
-            <p class="step-or">Ou pour Claude Code&nbsp;:</p>
-            <pre class="code"><code>curl -fsSL https://claude.ai/install.sh | bash
-claude auth login</code><button type="button" class="copy" data-copy>Copier</button></pre>
-            <p class="step-note">Avec Claude Code, TRACE ne génère ni illustrations ni portraits. Le reste du jeu est identique.</p>
+            <h3>Installez Codex et connectez-vous</h3>
+            <p>Téléchargez l'application Codex sur son site, ouvrez-la et connectez-vous avec votre compte ChatGPT. Sur Linux, l'agent installera aussi la commande dont TRACE a besoin.</p>
+            <p class="step-buttons"><a class="btn btn-primary btn-small" href="https://learn.chatgpt.com/docs/app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5m0-5-8 8M11 6H6v12h12v-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Télécharger Codex</a></p>
+            <p class="step-note">Vous préférez Claude Code&nbsp;? Suivez sa <a href="https://code.claude.com/docs/en/setup" target="_blank" rel="noopener">page d'installation</a>. Avec lui, TRACE ne génère ni illustrations ni portraits&nbsp;; le reste du jeu est identique.</p>
           </li>
           <li>
-            <h3>Téléchargez et extrayez TRACE</h3>
-            <p>Dans un terminal, depuis votre dossier personnel&nbsp;:</p>
-            <pre class="code"><code>curl -fL -O https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-linux-x86_64.tar.gz
-tar -xzf TRACE-linux-x86_64.tar.gz</code><button type="button" class="copy" data-copy>Copier</button></pre>
-            <p class="step-buttons"><a class="btn btn-primary btn-small" data-asset="TRACE-linux-x86_64.tar.gz" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-linux-x86_64.tar.gz"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Ou télécharger le .tar.gz</a></p>
-          </li>
-          <li>
-            <h3>Lancez TRACE</h3>
-            <p>Démarrez le jeu depuis le dossier extrait. La seconde commande, facultative, l'ajoute au menu des applications.</p>
-            <pre class="code"><code>./TRACE/trace
-./TRACE/install.sh</code><button type="button" class="copy" data-copy>Copier</button></pre>
-            <p class="step-note">Sans environnement graphique, <code>./TRACE/trace --headless</code> affiche l'adresse à ouvrir.</p>
-          </li>
-          <li>
-            <h3>Créez votre compte local et jouez</h3>
-            <p>TRACE vérifie que l'assistant répond, puis ouvre le jeu dans votre navigateur. Une petite fenêtre TRACE reste ouverte&nbsp;: son bouton <strong>Assistant…</strong> permet de passer de Codex à Claude Code, et la fermer arrête le jeu. Créez ensuite un compte dans l'interface&nbsp;: il n'existe que sur votre ordinateur.</p>
-            <p class="step-note">Vos parties sont dans <code>~/.local/share/TRACE/</code>.</p>
-          </li>
-        </ol>
-        <details class="agent">
-          <summary>Confier l'installation à un agent, Codex ou Claude Code</summary>
-          <p>Collez ce texte dans l'agent, sur l'ordinateur où vous voulez jouer. Il s'arrêtera dès qu'une étape demande une action de votre part.</p>
-          <pre class="code code-prompt"><code data-prompt>Installe le jeu TRACE sur cet ordinateur Linux. Procède étape par étape et arrête-toi pour me demander dès qu'une étape exige une action de ma part. Ne saisis jamais de mot de passe ni de code à ma place.
+            <h3>Donnez ce prompt à Codex</h3>
+            <p>Copiez ce texte et collez-le dans Codex, sur l'ordinateur où vous voulez jouer. Il télécharge TRACE, l'installe et le lance, et s'arrête dès qu'une étape demande une action de votre part.</p>
+            <pre class="code code-prompt"><code data-prompt>Installe le jeu TRACE sur cet ordinateur Linux. Procède étape par étape et arrête-toi pour me demander dès qu'une étape exige une action de ma part. Ne saisis jamais de mot de passe ni de code à ma place.
 
 1. Vérifie que le processeur est x86_64 (uname -m) et que la glibc est en version 2.35 ou plus (ldd --version). Sinon, arrête-toi et dis-le-moi.
 
-2. TRACE a besoin d'un assistant en ligne de commande connecté à mon compte : Codex CLI (codex --version, codex login status) ou Claude Code (claude --version, claude auth status). Vérifie lequel est installé et connecté. S'il en manque un, propose de l'installer. Si je ne suis pas connecté, demande-moi de lancer moi-même codex login ou claude auth login. Préviens-moi qu'avec Claude Code le jeu ne génère ni illustrations ni portraits.
+2. TRACE fait vivre son maître du jeu avec l'assistant de cet ordinateur, par sa commande : vérifie codex --version et codex login status, ou claude --version et claude auth status. Si aucune commande ne répond, installe avec mon accord celle de l'assistant que j'utilise. Si je ne suis pas connecté, demande-moi de lancer moi-même codex login ou claude auth login. Préviens-moi qu'avec Claude Code le jeu ne génère ni illustrations ni portraits.
 
 3. Télécharge puis extrais le paquet dans mon dossier personnel :
    curl -fL -o ~/TRACE-linux-x86_64.tar.gz https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-linux-x86_64.tar.gz
@@ -486,6 +478,38 @@ tar -xzf TRACE-linux-x86_64.tar.gz</code><button type="button" class="copy" data
 6. Vérifie que le jeu démarre. En cas d'échec, montre-moi la fin de ~/.local/share/TRACE/logs/desktop.log.
 
 Termine en me disant ce qui a été installé, où, avec quel assistant, et ce qu'il me reste à faire : créer un compte local dans l'interface de TRACE.</code><button type="button" class="copy" data-copy>Copier le prompt</button></pre>
+          </li>
+          <li>
+            <h3>Créez votre compte local et jouez</h3>
+            <p>TRACE vérifie que l'assistant répond, puis ouvre le jeu dans votre navigateur. Une petite fenêtre TRACE reste ouverte&nbsp;: son bouton <strong>Assistant…</strong> permet de passer de Codex à Claude Code, et la fermer arrête le jeu. Créez un compte dans l'interface&nbsp;: il n'existe que sur votre ordinateur. Vos parties sont dans <code>~/.local/share/TRACE/</code>.</p>
+          </li>
+        </ol>
+        <details class="agent">
+          <summary>Installer à la main, sans agent</summary>
+          <ol class="steps steps-manual">
+            <li>
+              <h3>Ayez la commande codex ou claude, connectée</h3>
+              <p>Sur Linux, TRACE passe par la commande de l'assistant. Dans un terminal, pour Codex CLI puis pour Claude Code&nbsp;:</p>
+              <pre class="code"><code>npm install -g @openai/codex
+codex login</code><button type="button" class="copy" data-copy>Copier</button></pre>
+              <pre class="code"><code>curl -fsSL https://claude.ai/install.sh | bash
+claude auth login</code><button type="button" class="copy" data-copy>Copier</button></pre>
+            </li>
+            <li>
+              <h3>Téléchargez et extrayez TRACE</h3>
+              <p>Dans un terminal, depuis votre dossier personnel&nbsp;:</p>
+              <pre class="code"><code>curl -fL -O https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-linux-x86_64.tar.gz
+tar -xzf TRACE-linux-x86_64.tar.gz</code><button type="button" class="copy" data-copy>Copier</button></pre>
+              <p class="step-buttons"><a class="btn btn-primary btn-small" data-asset="TRACE-linux-x86_64.tar.gz" href="https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-linux-x86_64.tar.gz"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Ou télécharger le .tar.gz</a></p>
+            </li>
+            <li>
+              <h3>Lancez TRACE</h3>
+              <p>Démarrez le jeu depuis le dossier extrait. La seconde commande, facultative, l'ajoute au menu des applications.</p>
+              <pre class="code"><code>./TRACE/trace
+./TRACE/install.sh</code><button type="button" class="copy" data-copy>Copier</button></pre>
+              <p class="step-note">Sans environnement graphique, <code>./TRACE/trace --headless</code> affiche l'adresse à ouvrir.</p>
+            </li>
+          </ol>
         </details>
       </div>
     </div>
@@ -520,7 +544,7 @@ Termine en me disant ce qui a été installé, où, avec quel assistant, et ce q
       </details>
       <details>
         <summary>TRACE ne trouve pas mon assistant</summary>
-        <p>Sur Mac, ouvrez le menu <strong>TRACE → Assistant</strong>&nbsp;; sur Windows et Linux, le bouton <strong>Assistant…</strong> de la fenêtre TRACE. Vous pouvez y choisir Codex ou Claude Code et indiquer l'emplacement de la commande. Vérifiez aussi que <code>codex login status</code> ou <code>claude auth status</code> vous montre connecté.</p>
+        <p>Sur Mac, ouvrez le menu <strong>TRACE → Assistant</strong>&nbsp;; sur Windows et Linux, le bouton <strong>Assistant…</strong> de la fenêtre TRACE. Vous pouvez y choisir Codex ou Claude Code et indiquer l'emplacement de la commande. Vérifiez aussi que vous êtes connecté dans l'application Codex, ou que <code>claude auth status</code> vous montre connecté.</p>
       </details>
     </div>
   </div>

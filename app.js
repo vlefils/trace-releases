@@ -469,7 +469,7 @@ void main(){
     }
     if (version) {
       $("#release-line").textContent = `Version ${version}${date ? `, publiée le ${date}` : ""}. Choisissez le paquet de votre ordinateur.`;
-      $("#hero-note").textContent = `Version ${version} · macOS, Windows et Linux · avec Codex CLI ou Claude Code`;
+      $("#hero-note").textContent = `Version ${version} · macOS, Windows et Linux · avec Codex ou Claude Code`;
     }
   });
 
