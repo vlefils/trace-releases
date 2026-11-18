@@ -337,27 +337,11 @@
             <p class="step-note">Vous préférez Claude Code&nbsp;? Suivez sa <a href="https://code.claude.com/docs/en/setup" target="_blank" rel="noopener">page d'installation</a>. Avec lui, TRACE ne génère ni illustrations ni portraits&nbsp;; le reste du jeu est identique.</p>
           </li>
           <li>
-            <h3>Donnez ce prompt à Codex</h3>
-            <p>Copiez ce texte et collez-le dans Codex, sur le Mac où vous voulez jouer. Il télécharge TRACE, l'installe et le lance, et s'arrête dès qu'une étape demande une action de votre part.</p>
-            <pre class="code code-prompt"><code data-prompt>Installe le jeu TRACE sur ce Mac. Procède étape par étape et arrête-toi pour me demander dès qu'une étape exige une action de ma part. Ne saisis jamais de mot de passe ni de code à ma place.
+            <h3>Installez TRACE 0.4.0 avec Codex</h3>
+            <p>Copiez ce message dans Codex sur votre Mac. Il convient aussi si TRACE 0.3.0 est déjà installé.</p>
+            <pre class="code code-prompt"><code data-prompt>Installe TRACE 0.4.0 sur ce Mac en suivant les instructions macOS de la version officielle https://github.com/vlefils/trace-releases/releases/tag/v0.4.0
 
-1. Vérifie que macOS est en version 15 ou plus (sw_vers) et note le processeur (uname -m : arm64 ou x86_64). Si macOS est plus ancien, arrête-toi et dis-le-moi.
-
-2. TRACE fait vivre son maître du jeu avec l'assistant de cet ordinateur. Si tu es Codex, l'application dans laquelle je te parle suffit : TRACE trouve sa commande tout seul, n'installe rien de plus. Si tu es Claude Code, vérifie claude --version et claude auth status ; si je ne suis pas connecté, demande-moi de lancer moi-même claude auth login, et préviens-moi qu'avec Claude Code le jeu ne génère ni illustrations ni portraits.
-
-3. Télécharge dans ~/Downloads le paquet du processeur :
-   curl -fL -o ~/Downloads/TRACE.dmg https://github.com/vlefils/trace-releases/releases/latest/download/TRACE-macOS-arm64.dmg
-   (TRACE-macOS-x86_64.dmg sur un Mac Intel).
-
-4. Monte le DMG avec hdiutil attach, copie TRACE.app dans /Applications avec ditto, puis démonte-le avec hdiutil detach. Si une ancienne TRACE.app existe, vérifie qu'elle est fermée avant de la remplacer. Ne touche jamais à ~/Library/Application Support/TRACE/ : ce dossier contient mes parties et mes comptes.
-
-5. L'application n'est pas notarisée. Si elle porte l'attribut de quarantaine, retire-le sur elle seule :
-   xattr -dr com.apple.quarantine /Applications/TRACE.app
-   Ne modifie aucun réglage de sécurité global du Mac.
-
-6. Ouvre TRACE (open -a TRACE) et vérifie qu'une fenêtre s'affiche. Si TRACE dit qu'il ne trouve pas l'assistant, cherche l'exécutable codex ou claude sur ce Mac et donne-moi son chemin : je le choisirai dans le menu TRACE → Assistant. En cas d'autre échec, montre-moi la fin de ~/Library/Application Support/TRACE/logs/desktop.log.
-
-Termine en me disant ce qui a été installé, où, avec quel assistant, et ce qu'il me reste à faire : créer un compte local dans l'interface de TRACE.</code><button type="button" class="copy" data-copy>Copier le prompt</button></pre>
+Si TRACE est déjà installé, mets-le à jour en conservant mes comptes et mes parties. Utilise mon Codex déjà installé et vérifie que TRACE démarre. Si je dois autoriser l’ouverture de l’app ou me connecter, guide-moi.</code><button type="button" class="copy" data-copy>Copier le prompt</button></pre>
           </li>
           <li>
             <h3>Créez votre compte local et jouez</h3>
