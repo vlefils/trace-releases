@@ -375,7 +375,7 @@ claude auth login</code><button type="button" class="copy" data-copy>Copier</but
       </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-windows" aria-labelledby="tab-windows">
-        <p class="journey-lede">Pour Windows 10 ou 11, 64 bits. Le jeu s'ouvre dans votre navigateur.</p>
+        <p class="journey-lede">Pour Windows 10 ou 11, 64 bits. TRACE s'ouvre dans sa propre fenêtre.</p>
         <ol class="steps">
           <li>
             <h3>Installez Codex et connectez-vous</h3>
@@ -397,15 +397,15 @@ claude auth login</code><button type="button" class="copy" data-copy>Copier</but
 
 4. Extrais l'archive dans mon dossier Documents avec Expand-Archive : elle crée Documents\TRACE. Si ce dossier existe déjà, vérifie que TRACE est fermé avant de le remplacer. Ne touche jamais à %LOCALAPPDATA%\TRACE : ce dossier contient mes parties et mes comptes.
 
-5. Lance Documents\TRACE\TRACE.exe. Le jeu s'ouvre dans le navigateur et une petite fenêtre TRACE reste ouverte : c'est normal. Si Windows affiche « Windows a protégé votre ordinateur », demande-moi de cliquer moi-même sur « Informations complémentaires », puis « Exécuter quand même ». Ne désactive aucune protection de Windows.
+5. Lance Documents\TRACE\TRACE.exe. La fenêtre de TRACE s'ouvre et prépare la table ; quand son bouton Jouer s'allume, la partie s'ouvre dans sa propre fenêtre. Si Windows affiche « Windows a protégé votre ordinateur », demande-moi de cliquer moi-même sur « Informations complémentaires », puis « Exécuter quand même ». Ne désactive aucune protection de Windows.
 
-6. Vérifie que le jeu démarre. Si TRACE dit qu'il ne trouve pas l'assistant, cherche l'exécutable codex ou claude sur ce PC et donne-moi son chemin : je le choisirai avec le bouton Assistant… de la fenêtre TRACE. En cas d'autre échec, montre-moi la fin de %LOCALAPPDATA%\TRACE\logs\desktop.log.
+6. Vérifie que le jeu démarre. Si TRACE dit qu'il ne trouve pas l'assistant, cherche l'exécutable codex ou claude sur ce PC et donne-moi son chemin : je le choisirai avec le bouton Assistant de la fenêtre TRACE. En cas d'autre échec, montre-moi la fin de %LOCALAPPDATA%\TRACE\logs\desktop.log.
 
 Termine en me disant ce qui a été installé, où, avec quel assistant, et ce qu'il me reste à faire : créer un compte local dans l'interface de TRACE.</code><button type="button" class="copy" data-copy>Copier le prompt</button></pre>
           </li>
           <li>
             <h3>Créez votre compte local et jouez</h3>
-            <p>TRACE vérifie que l'assistant répond, puis ouvre le jeu dans votre navigateur. Une petite fenêtre TRACE reste ouverte&nbsp;: son bouton <strong>Assistant…</strong> permet de passer de Codex à Claude Code, et la fermer arrête le jeu. Créez un compte dans l'interface&nbsp;: il n'existe que sur votre PC. Vos parties sont dans <code>%LOCALAPPDATA%\TRACE\</code>.</p>
+            <p>TRACE vérifie que l'assistant répond et prépare la table, puis son bouton <strong>Jouer</strong> ouvre la partie dans sa propre fenêtre&nbsp;; <code>F11</code> la passe en plein écran. Fermer la partie ramène à la fenêtre TRACE&nbsp;: son bouton <strong>Assistant</strong> permet de passer de Codex à Claude Code, et la quitter arrête le jeu. Créez un compte dans l'interface&nbsp;: il n'existe que sur votre PC. Vos parties sont dans <code>%LOCALAPPDATA%\TRACE\</code>.</p>
           </li>
         </ol>
         <details class="agent">
@@ -528,7 +528,7 @@ tar -xzf TRACE-linux-x86_64.tar.gz</code><button type="button" class="copy" data
       </details>
       <details>
         <summary>TRACE ne trouve pas mon assistant</summary>
-        <p>Sur Mac, ouvrez le menu <strong>TRACE → Assistant</strong>&nbsp;; sur Windows et Linux, le bouton <strong>Assistant…</strong> de la fenêtre TRACE. Vous pouvez y choisir Codex ou Claude Code et indiquer l'emplacement de la commande. Vérifiez aussi que vous êtes connecté dans l'application Codex, ou que <code>claude auth status</code> vous montre connecté.</p>
+        <p>Sur Mac, ouvrez le menu <strong>TRACE → Assistant</strong>&nbsp;; sur Windows, le bouton <strong>Assistant</strong> de la fenêtre TRACE&nbsp;; sur Linux, son bouton <strong>Assistant…</strong>. Vous pouvez y choisir Codex ou Claude Code et indiquer l'emplacement de la commande. Vérifiez aussi que vous êtes connecté dans l'application Codex, ou que <code>claude auth status</code> vous montre connecté.</p>
       </details>
     </div>
   </div>
