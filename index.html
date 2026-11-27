@@ -34,8 +34,8 @@
     <a href="#jeu">Le jeu</a>
     <a href="#demo">Démo</a>
     <a href="#mondes">Mondes</a>
-    <a href="#installer">Installer</a>
-    <a class="topnav-cta" href="#telecharger">Télécharger</a>
+    <a href="#telecharger">Télécharger</a>
+    <a class="topnav-cta" href="#installer">Installer</a>
   </nav>
 </header>
 
@@ -71,12 +71,14 @@
     </h1>
     <p class="lede">Vous écrivez ce que fait votre personnage. Un maître du jeu vous répond, lance les dés et fait vivre le monde autour de vous.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="#telecharger" data-magnetic>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Télécharger TRACE
+      <a class="btn btn-primary" href="#installer" data-magnetic>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13m0 0-5-5m5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Installer TRACE
       </a>
       <a class="btn btn-ghost" href="#demo">Jouer une scène d'essai</a>
     </div>
+    <!-- The install guide hands Codex or Claude Code a prompt that downloads the package itself. -->
+    <p class="hero-manual">Votre assistant installe TRACE pour vous. <a href="#telecharger">Pour télécharger manuellement</a></p>
     <p class="hero-note" id="hero-note">macOS, Windows et Linux · avec Codex ou Claude Code</p>
   </div>
 
@@ -337,9 +339,9 @@
             <p class="step-note">Vous préférez Claude Code&nbsp;? Suivez sa <a href="https://code.claude.com/docs/en/setup" target="_blank" rel="noopener">page d'installation</a>. Avec lui, TRACE ne génère ni illustrations ni portraits&nbsp;; le reste du jeu est identique.</p>
           </li>
           <li>
-            <h3>Installez TRACE 0.7.0 avec Codex</h3>
+            <h3>Donnez ce prompt à Codex</h3>
             <p>Copiez ce message dans Codex sur votre Mac pour installer TRACE ou mettre à jour votre version.</p>
-            <pre class="code code-prompt"><code data-prompt>Installe TRACE 0.7.0 sur ce Mac en suivant les instructions macOS de la version officielle https://github.com/vlefils/trace-releases/releases/tag/v0.7.0
+            <pre class="code code-prompt"><code data-prompt>Installe TRACE sur ce Mac en suivant les instructions macOS de la dernière version officielle https://github.com/vlefils/trace-releases/releases/latest
 
 Si TRACE est déjà installé, mets-le à jour en conservant mes comptes et mes parties. Utilise mon Codex déjà installé et vérifie que TRACE démarre. Si je dois autoriser l’ouverture de l’app ou me connecter, guide-moi.</code><button type="button" class="copy" data-copy>Copier le prompt</button></pre>
           </li>
@@ -405,7 +407,7 @@ Termine en me disant ce qui a été installé, où, avec quel assistant, et ce q
           </li>
           <li>
             <h3>Créez votre compte local et jouez</h3>
-            <p>TRACE vérifie que l'assistant répond et prépare la table, puis son bouton <strong>Jouer</strong> ouvre la partie dans sa propre fenêtre&nbsp;; <code>F11</code> la passe en plein écran. Fermer la partie ramène à la fenêtre TRACE&nbsp;: son bouton <strong>Assistant</strong> permet de passer de Codex à Claude Code, et la quitter arrête le jeu. Créez un compte dans l'interface&nbsp;: il n'existe que sur votre PC. Vos parties sont dans <code>%LOCALAPPDATA%\TRACE\</code>.</p>
+            <p>Au premier lancement, TRACE propose un raccourci sur le Bureau et dans le menu Démarrer. Il vérifie ensuite que l'assistant répond et prépare la table, puis son bouton <strong>Jouer</strong> ouvre la partie dans sa propre fenêtre&nbsp;; <code>F11</code> la passe en plein écran. Fermer la partie ramène à la fenêtre TRACE&nbsp;: son bouton <strong>Assistant</strong> permet de passer de Codex à Claude Code, et la quitter arrête le jeu. Créez un compte dans l'interface&nbsp;: il n'existe que sur votre PC. Vos parties sont dans <code>%LOCALAPPDATA%\TRACE\</code>.</p>
           </li>
         </ol>
         <details class="agent">
